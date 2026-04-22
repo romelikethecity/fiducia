@@ -1,0 +1,14 @@
+{
+  "name": "Fiducia",
+  "short_name": "Fiducia",
+  "icons": [
+    {
+      "src": "/assets/favicons/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
+  "theme_color": "#1B2A4A",
+  "background_color": "#FFFFFF",
+  "display": "standalone"
+}
