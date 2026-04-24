@@ -1,0 +1,78 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F1B33"/>
+      <stop offset="100%" stop-color="#1B2A4A"/>
+    </linearGradient>
+    <linearGradient id="amber-grad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#B45309"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.04" stroke="#FFFFFF" stroke-width="0.5">
+    <line x1="0" y1="0" x2="0" y2="630"/>
+    <line x1="100" y1="0" x2="100" y2="630"/>
+    <line x1="200" y1="0" x2="200" y2="630"/>
+    <line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="400" y1="0" x2="400" y2="630"/>
+    <line x1="500" y1="0" x2="500" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="700" y1="0" x2="700" y2="630"/>
+    <line x1="800" y1="0" x2="800" y2="630"/>
+    <line x1="900" y1="0" x2="900" y2="630"/>
+    <line x1="1000" y1="0" x2="1000" y2="630"/>
+    <line x1="1100" y1="0" x2="1100" y2="630"/>
+    <line x1="1200" y1="0" x2="1200" y2="630"/>
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+  </g>
+
+  <!-- Large decorative ascending bars (bottom right) -->
+  <g transform="translate(850, 180)">
+    <rect x="0" y="240" width="60" height="120" rx="8" fill="#D97706" opacity="0.15"/>
+    <rect x="80" y="160" width="60" height="200" rx="8" fill="#D97706" opacity="0.25"/>
+    <rect x="160" y="60" width="60" height="300" rx="8" fill="#D97706" opacity="0.35"/>
+    <rect x="240" y="-40" width="60" height="400" rx="8" fill="url(#amber-grad)" opacity="0.12"/>
+  </g>
+
+  <!-- Logo icon -->
+  <g transform="translate(80, 180)">
+    <rect width="64" height="64" rx="14" fill="#0F1B33" stroke="#D97706" stroke-width="1.5" stroke-opacity="0.3"/>
+    <rect x="12" y="40" width="12" height="18" rx="2" fill="#D97706" opacity="0.5"/>
+    <rect x="26" y="30" width="12" height="28" rx="2" fill="#D97706" opacity="0.7"/>
+    <rect x="40" y="16" width="12" height="42" rx="2" fill="#D97706"/>
+  </g>
+
+  <!-- Logo text -->
+  <text x="160" y="228" font-family="Plus Jakarta Sans, -apple-system, BlinkMacSystemFont, sans-serif" font-weight="700" font-size="40" fill="#FFFFFF" letter-spacing="-1">Fiducia</text>
+
+  <!-- Main headline -->
+  <text x="80" y="330" font-family="Plus Jakarta Sans, -apple-system, BlinkMacSystemFont, sans-serif" font-weight="700" font-size="52" fill="#FFFFFF" letter-spacing="-1.5">CRD-Verified Financial</text>
+  <text x="80" y="395" font-family="Plus Jakarta Sans, -apple-system, BlinkMacSystemFont, sans-serif" font-weight="700" font-size="52" fill="#FFFFFF" letter-spacing="-1.5">Advisor Data</text>
+
+  <!-- Subtitle -->
+  <text x="80" y="455" font-family="Plus Jakarta Sans, -apple-system, BlinkMacSystemFont, sans-serif" font-weight="400" font-size="22" fill="#94A3B8">Direct emails, phones, AUM ranges, and license types</text>
+  <text x="80" y="485" font-family="Plus Jakarta Sans, -apple-system, BlinkMacSystemFont, sans-serif" font-weight="400" font-size="22" fill="#94A3B8">for 300,000+ registered advisors nationwide.</text>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="570" width="1200" height="60" fill="#0F1B33"/>
+  <text x="80" y="607" font-family="Plus Jakarta Sans, -apple-system, BlinkMacSystemFont, sans-serif" font-weight="600" font-size="16" fill="#D97706" letter-spacing="0.5">getFiducia.com</text>
+
+  <!-- Bottom stats -->
+  <text x="500" y="607" font-family="Plus Jakarta Sans, -apple-system, BlinkMacSystemFont, sans-serif" font-weight="500" font-size="14" fill="#64748B">FINRA Verified</text>
+  <circle cx="610" cy="603" r="2" fill="#64748B"/>
+  <text x="625" y="607" font-family="Plus Jakarta Sans, -apple-system, BlinkMacSystemFont, sans-serif" font-weight="500" font-size="14" fill="#64748B">No Annual Contracts</text>
+  <circle cx="775" cy="603" r="2" fill="#64748B"/>
+  <text x="790" y="607" font-family="Plus Jakarta Sans, -apple-system, BlinkMacSystemFont, sans-serif" font-weight="500" font-size="14" fill="#64748B">3-5 Day Delivery</text>
+
+  <!-- Amber accent line at top -->
+  <rect x="0" y="0" width="1200" height="4" fill="#D97706"/>
+</svg>

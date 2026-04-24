@@ -57,6 +57,32 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/styles.css?v=1">
+
+    <!-- Google Analytics 4 with Consent Mode v2 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      var _fc = localStorage.getItem('fiducia-consent');
+      if (_fc === 'granted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T86RC0L61S"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-T86RC0L61S');
+    </script>
 </head>
 <body>
     <a href="#main-content" class="sr-only sr-only--focusable">Skip to main content</a>
