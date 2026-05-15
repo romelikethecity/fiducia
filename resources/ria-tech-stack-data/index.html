@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1B2A4A">
+    <title>RIA Tech Stack Data: CRM, Planning, Custodian</title>
+    <meta name="description" content="Identify what CRM (Redtail, Wealthbox, Salesforce FSC), planning tool (eMoney, MoneyGuide), and custodian a given RIA uses.">
+    <link rel="canonical" href="https://getFiducia.com/resources/ria-tech-stack-data/">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://getFiducia.com/resources/ria-tech-stack-data/">
+    <meta property="og:title" content="RIA Tech Stack Data: CRM, Planning, Custodian">
+    <meta property="og:description" content="Identify what CRM (Redtail, Wealthbox, Salesforce FSC), planning tool (eMoney, MoneyGuide), and custodian a given RIA uses.">
+    <meta property="og:site_name" content="Fiducia">
+    <meta property="og:image" content="https://getFiducia.com/assets/images/og-fiducia.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RIA Tech Stack Data: CRM, Planning, Custodian">
+    <meta name="twitter:description" content="Identify what CRM (Redtail, Wealthbox, Salesforce FSC), planning tool (eMoney, MoneyGuide), and custodian a given RIA uses.">
+    <meta name="twitter:image" content="https://getFiducia.com/assets/images/og-fiducia.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://getFiducia.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Resources",
+      "item": "https://getFiducia.com/resources/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "RIA Tech Stack Data: How to Know What Software an RIA Uses",
+      "item": "https://getFiducia.com/resources/ria-tech-stack-data/"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "RIA Tech Stack Data: How to Know What Software an RIA Uses",
+  "description": "Identify what CRM (Redtail, Wealthbox, Salesforce FSC), planning tool (eMoney, MoneyGuide), and custodian a given RIA uses.",
+  "author": {
+    "@type": "Organization",
+    "name": "Fiducia"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fiducia",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://getFiducia.com/assets/favicons/apple-touch-icon.png"
+    }
+  },
+  "datePublished": "2026-05-14",
+  "dateModified": "2026-05-14",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://getFiducia.com/resources/ria-tech-stack-data/"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where can I get a list of which CRM each RIA uses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There's no single public list. The best sources are vendor partnerships (when available), web fingerprinting of advisor sites, recent job postings, and inference from firm size and channel. Confidence varies by source."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is custodian data more reliable than CRM data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Custodian is disclosed on Form ADV Item 9 with 95%+ confidence. CRM choice isn't disclosed anywhere public and has to be inferred."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do firms migrate between CRMs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Migrations typically take 4 to 9 months. The trigger is usually scale (outgrowing the current system), integration needs (consolidating around a new platform), or a major hire who has experience with a different system."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I trust BuiltWith-style fingerprinting for advisor tech?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Partially. BuiltWith and similar tools detect general web tech. Advisor-specific stacks need specialized detection (client portal subdomains, vendor case studies, integration footprints). Accuracy is lower than for general web tech."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Form ADV report CRM or planning software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Form ADV reports custodial relationships, firm structure, and AUM. It doesn't report internal software choices. CRM and planning tool data must come from other sources."
+      }
+    }
+  ]
+}
+    </script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg">
+    <link rel="icon" type="image/svg+xml" sizes="16x16" href="/assets/favicons/favicon-16.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+
+    <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/css/styles.css?v=1" as="style">
+    <link rel="stylesheet" href="/assets/fonts/plus-jakarta-sans.min.css">
+    <link rel="stylesheet" href="/css/styles.css?v=1">
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      var _fc = localStorage.getItem('fiducia-consent');
+      if (_fc === 'granted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T86RC0L61S"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-T86RC0L61S');
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="sr-only sr-only--focusable">Skip to main content</a>
+    <header class="header" role="banner">
+        <div class="container header__inner">
+            <a href="/" class="header__logo">
+                <img src="/assets/favicons/favicon.svg" alt="" class="header__logo-icon" width="32" height="32" fetchpriority="high">
+                <span class="header__logo-text">Fiducia</span>
+            </a>
+
+            <nav class="nav--desktop" role="navigation" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Data <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/advisors/" class="nav__dropdown-item">All Advisor Data</a>
+<a href="/advisors/ria/" class="nav__dropdown-item">Registered Investment Advisors</a>
+<a href="/advisors/broker-dealer/" class="nav__dropdown-item">Broker-Dealer Reps</a>
+<a href="/advisors/cfp/" class="nav__dropdown-item">Certified Financial Planners</a>
+<a href="/advisors/wealth-management/" class="nav__dropdown-item">Wealth Managers</a>
+<a href="/advisors/retirement/" class="nav__dropdown-item">Retirement Plan Advisors</a>
+                    </div>
+                </li><li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Services <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/services/advisor-contact-data/" class="nav__dropdown-item">Advisor Contact Data</a>
+<a href="/services/firm-intelligence/" class="nav__dropdown-item">Firm Intelligence</a>
+<a href="/services/custom-list-building/" class="nav__dropdown-item">Custom List Building</a>
+<a href="/services/aum-segmentation/" class="nav__dropdown-item">AUM Segmentation</a>
+                    </div>
+                </li><li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Resources <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/resources/" class="nav__dropdown-item">Guides & Articles</a>
+<a href="/compare/" class="nav__dropdown-item">Comparisons</a>
+<a href="/alternatives/" class="nav__dropdown-item">Alternatives</a>
+<a href="/for/" class="nav__dropdown-item">By Industry</a>
+<a href="/glossary/" class="nav__dropdown-item">Glossary</a>
+                    </div>
+                </li><li><a href="/pricing/" class="nav__link">Pricing</a></li><li><a href="/about/" class="nav__link">About</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__cta">
+                <a href="/contact/" class="btn btn--primary btn--sm">Get 20 Free Records</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span class="menu-toggle__icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav--mobile" role="navigation" aria-label="Mobile navigation">
+        <ul class="nav__list">
+            <li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Data <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/advisors/" class="nav__dropdown-item">All Advisor Data</a>
+<a href="/advisors/ria/" class="nav__dropdown-item">Registered Investment Advisors</a>
+<a href="/advisors/broker-dealer/" class="nav__dropdown-item">Broker-Dealer Reps</a>
+<a href="/advisors/cfp/" class="nav__dropdown-item">Certified Financial Planners</a>
+<a href="/advisors/wealth-management/" class="nav__dropdown-item">Wealth Managers</a>
+<a href="/advisors/retirement/" class="nav__dropdown-item">Retirement Plan Advisors</a>
+                    </div>
+                </li><li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Services <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/services/advisor-contact-data/" class="nav__dropdown-item">Advisor Contact Data</a>
+<a href="/services/firm-intelligence/" class="nav__dropdown-item">Firm Intelligence</a>
+<a href="/services/custom-list-building/" class="nav__dropdown-item">Custom List Building</a>
+<a href="/services/aum-segmentation/" class="nav__dropdown-item">AUM Segmentation</a>
+                    </div>
+                </li><li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Resources <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/resources/" class="nav__dropdown-item">Guides & Articles</a>
+<a href="/compare/" class="nav__dropdown-item">Comparisons</a>
+<a href="/alternatives/" class="nav__dropdown-item">Alternatives</a>
+<a href="/for/" class="nav__dropdown-item">By Industry</a>
+<a href="/glossary/" class="nav__dropdown-item">Glossary</a>
+                    </div>
+                </li><li><a href="/pricing/" class="nav__link">Pricing</a></li><li><a href="/about/" class="nav__link">About</a></li>
+        </ul>
+        <a href="/contact/" class="btn btn--primary">Get 20 Free Records</a>
+    </nav>
+
+    <script>
+    (function(){
+        var toggle=document.querySelector('.menu-toggle');
+        var mobileNav=document.querySelector('.nav--mobile');
+        if(!toggle||!mobileNav)return;
+        toggle.addEventListener('click',function(){
+            var open=mobileNav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            toggle.setAttribute('aria-expanded',open);
+            document.body.style.overflow=open?'hidden':'';
+        });
+        var dropdowns=document.querySelectorAll('.nav__item--dropdown .nav__dropdown-toggle');
+        dropdowns.forEach(function(btn){
+            btn.addEventListener('click',function(e){
+                e.preventDefault();
+                var parent=btn.closest('.nav__item--dropdown');
+                var wasActive=parent.classList.contains('active');
+                if(mobileNav.contains(parent)){
+                    mobileNav.querySelectorAll('.nav__item--dropdown.active').forEach(function(d){d.classList.remove('active');d.querySelector('.nav__dropdown-toggle').setAttribute('aria-expanded','false');});
+                }
+                if(!wasActive){
+                    parent.classList.add('active');
+                    btn.setAttribute('aria-expanded','true');
+                }else{
+                    parent.classList.remove('active');
+                    btn.setAttribute('aria-expanded','false');
+                }
+            });
+        });
+    })();
+    </script>
+
+    <main id="main-content">
+
+        <section class="page-hero">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="https://getFiducia.com">Home</a> <span class="breadcrumb__separator">/</span> <a href="https://getFiducia.com/resources/">Resources</a> <span class="breadcrumb__separator">/</span> <span class="breadcrumb__current">RIA Tech Stack Data: How to Know What Software an RIA Uses</span>
+        </nav>
+                <h1 class="page-hero__title">RIA Tech Stack Data: How to Know What Software an RIA Uses</h1>
+                <p class="page-hero__subtitle">How to identify what CRM, planning software, and custodian an RIA uses. The signals, the surveys, and the limits of each method.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <article class="content__body">
+
+                    <p>If you sell software into the RIA stack you've probably wished there was a tidy public file of what each firm uses. There isn't. CRM, planning software, and custodian choices aren't disclosed in regulatory filings. But there are enough indirect signals that you can build a usable map of who uses what, with caveats.</p>
+
+                    <p>Here's how the tech-stack data world really works.</p>
+
+                    <h2>The Three Stack Layers That Matter</h2>
+                    <p>For most vendors, three layers cover 80% of the question.</p>
+                    <ol>
+                        <li>CRM (Redtail, Wealthbox, Salesforce Financial Services Cloud, Practifi, Junxure)</li>
+                        <li>Financial planning software (eMoney, MoneyGuide, RightCapital, Asset-Map)</li>
+                        <li>Custodian (Schwab Advisor Services, Fidelity Wealthscape, Pershing, LPL, smaller custodians)</li>
+                    </ol>
+                    <p>Additional layers (performance reporting, billing, portfolio management, document management, client portal) matter for specific vendors but aren't usually the lead segmentation field. Most teams start with the three above.</p>
+
+                    <h2>Source 1: Survey Data</h2>
+                    <p>The T3 Inside Information Survey is the largest published annual survey of advisor technology adoption. It tracks share by category and reports who's growing and shrinking. Useful for category-level market sizing. Less useful for firm-level targeting because the data is aggregated.</p>
+
+                    <p>Kitces.com Research also publishes annual technology surveys with strong category breakdowns. Free or low-cost. Again, aggregate not firm-level.</p>
+
+                    <h2>Source 2: Firmographic Inference</h2>
+                    <p>You can infer parts of the stack from firm characteristics on Form ADV.</p>
+                    <ul>
+                        <li>Custodian: Schedule D Item 9 (custody) names the qualified custodian. This is the most reliable single inference. If a firm reports Charles Schwab as the qualified custodian, they use Schwab Advisor Services.</li>
+                        <li>Firm size and channel often predict CRM choice. Solo RIAs skew heavily Wealthbox or Redtail. Mid-tier firms skew Redtail, Wealthbox, or Junxure. Enterprise RIAs lean Salesforce FSC or Practifi.</li>
+                        <li>Planning software is hardest to infer. eMoney dominates enterprise. MoneyGuide is broad. RightCapital is growing in fee-only emerging RIAs.</li>
+                    </ul>
+
+                    <h2>Source 3: Web and Tech-Fingerprint Signals</h2>
+                    <p>The most reliable firm-level signal comes from the advisor's own digital footprint.</p>
+                    <ul>
+                        <li>Client portal subdomains: a firm with portal.wealthbox.com behind their client login uses Wealthbox. A firm using emoneyadvisor.com confirms eMoney.</li>
+                        <li>Scheduling integrations on their website often expose their CRM (Calendly with Wealthbox sync, ScheduleOnce with Redtail).</li>
+                        <li>Job postings on LinkedIn or Indeed often name the firm's CRM and planning software explicitly. A "Redtail experience required" posting is a perfect signal.</li>
+                        <li>Press releases and case studies on vendor websites name the firm directly. eMoney, Orion, Black Diamond, and Envestnet all publish customer lists.</li>
+                    </ul>
+
+                    <p>This is the same fingerprinting approach BuiltWith uses for general web tech, applied to advisor-specific stacks. We crawl these signals as part of our firm-intelligence builds.</p>
+
+                    <h2>Source 4: Custodian Data</h2>
+                    <p>The custodian relationship is published on Form ADV Item 9 and Schedule D Item 9. It's high-confidence. If you're segmenting by custodian (and many wealthtech vendors do because integrations are custodian-specific), use this as your primary source. <a href="/resources/custodian-platform-comparison/">We compared the main custodians in a separate piece</a>.</p>
+
+                    <h2>Source 5: Vendor Customer Lists</h2>
+                    <p>Several CRM and planning vendors publish or share their customer rosters either publicly or through partner relationships. If you have a partnership with Redtail, Wealthbox, or eMoney, you can sometimes get a customer list as a co-marketing artifact. This is the highest-quality firm-level data when accessible.</p>
+
+                    <h2>What's Real and What's Inferred</h2>
+                    <p>Honest accounting of confidence levels:</p>
+                    <ul>
+                        <li>Custodian: 95%+ confidence from ADV Item 9.</li>
+                        <li>CRM: 60% to 75% confidence from web fingerprinting and job postings. 90%+ from vendor partnerships.</li>
+                        <li>Planning software: 50% to 65% confidence from web signals. 85%+ from vendor partnerships.</li>
+                        <li>Performance reporting: hardest. Usually inferred from custodian relationships (Schwab + Black Diamond is common, Fidelity + Tamarac is common).</li>
+                    </ul>
+
+                    <p>If a vendor sells you "verified RIA tech stack data" at 99% confidence, ask how it was sourced. There's no public registry. Confidence above 90% comes from vendor partnerships, not from inference.</p>
+
+                    <h2>How to Use Tech-Stack Data in Outreach</h2>
+                    <p>Three practical patterns.</p>
+
+                    <p><em>Negative signal as a filter.</em> If your product replaces Redtail, target firms that don't use Redtail (or that have recently posted jobs looking for Redtail experience, which often means they're frustrated). If your product integrates only with Salesforce FSC, exclude firms that don't use Salesforce.</p>
+
+                    <p><em>Migration signals.</em> A firm that posts a job requiring eMoney plus a "considering RightCapital" mention in an LinkedIn case study is in the middle of a migration. Migration windows are the highest-conversion outreach windows.</p>
+
+                    <p><em>Integration partnerships.</em> If you integrate natively with Wealthbox, the highest-value segment is firms using Wealthbox plus a complementary tool you replace or extend. Targeting Wealthbox + Redtail dual-system firms with a unification pitch usually outperforms generic Wealthbox-only outreach.</p>
+
+                    <h2>The Realistic Build</h2>
+                    <p>If we were starting a tech-stack data project today: start with custodian (high confidence, free, public). Add CRM inference from web fingerprinting and recent job postings. Layer planning-software signals from the same sources. Validate the top 10% of your target list manually before campaign launch. Don't promise 99% accuracy on inferred fields; promise high-confidence custodian data plus indicative CRM/planning data.</p>
+
+                    <p>For wealthtech vendors selling integrations, this stack data is the difference between cold outreach and warm outreach. We build it as part of our firm-intelligence service.</p>
+
+                    <h2>Each Tech Layer in Depth</h2>
+
+                    <h3>CRM Market Snapshot</h3>
+                    <p>Three CRMs dominate the independent RIA market. Wealthbox has the most modern UX and the strongest growth in emerging RIAs. Redtail (now Orion Connect) has the largest installed base and deep integration history. Salesforce Financial Services Cloud has the enterprise segment. Beyond the big three, Practifi is competitive in the $500M to $2B band, Junxure persists at firms that adopted it years ago, and a few vertical-specific CRMs (Tamarac CRM, the AdvisorEngine stack) compete in specific niches.</p>
+
+                    <p>Migration patterns: emerging RIAs typically pick Wealthbox first because of price and ease. Firms scaling past $500M often re-evaluate and either upgrade to Redtail (for integration breadth) or to Salesforce FSC (for customization). Migrations downward (out of Salesforce) are rare but happen when firms find the customization burden too heavy.</p>
+
+                    <h3>Planning Software Market Snapshot</h3>
+                    <p>eMoney is the enterprise standard. MoneyGuidePro is the broadest-installed across all RIA sizes. RightCapital is the fastest-growing in fee-only fiduciary firms. Asset-Map is popular for client-facing visual planning. NaviPlan and Advicent serve niche segments.</p>
+
+                    <p>Planning software changes less often than CRM. A typical firm runs the same planning tool for 5 to 10 years. The trigger for migration is usually a planning-philosophy change (cash-flow-based to goals-based planning, for example) or a major hire who has experience with a different tool.</p>
+
+                    <h3>Performance Reporting and Portfolio Management</h3>
+                    <p>This category sits below the surface but drives a lot of vendor choice. The leaders: Orion (broad market), Black Diamond (mid and upper market), Tamarac/Envestnet (enterprise), Addepar (ultra-high-net-worth and complex assets), and Advyzon (emerging market). Each has a distinct integration footprint with custodians and CRMs.</p>
+
+                    <p>Reporting-platform data is harder to pull from public signals than CRM data, because the platforms are less visible to end clients. The best signals are vendor case studies, conference sponsorships, and job postings.</p>
+
+                    <h2>How to Stack-Profile a Firm</h2>
+                    <p>If you want to manually profile a specific firm's stack, a 30-minute process gets you to 80% confidence:</p>
+                    <ol>
+                        <li>Pull Form ADV for the firm. Note custodian from Item 9.</li>
+                        <li>Visit the firm's website. Look at the client portal login URL pattern (Wealthbox uses portal.wealthbox.com; eMoney uses emoneyadvisor.com; etc.).</li>
+                        <li>Check the firm's career page or LinkedIn job postings for software mentions.</li>
+                        <li>Search vendor case studies for the firm name (eMoney, Orion, Black Diamond, Envestnet publish customer lists or testimonials).</li>
+                        <li>Look at the firm's LinkedIn page for staff profiles. Operations and IT staff often list their CRM and planning tool in their job experience.</li>
+                    </ol>
+                    <p>At scale, the same logic runs as a crawler-plus-fingerprinter against thousands of firms simultaneously. That's how we build stack-segmented lists for clients. <a href="/services/firm-intelligence/">Tell us what stack you want to find</a>.</p>
+
+                    <h2>Confidence Tiers for Stack Data</h2>
+                    <p>When we deliver stack-segmented lists, we tag each record with a confidence tier so the buyer knows what they're working with.</p>
+                    <p><em>Verified.</em> Confirmed through vendor partnership, public case study, or direct firm disclosure. Confidence above 95%. Roughly 15% to 25% of records typically reach this tier.</p>
+                    <p><em>High-confidence inferred.</em> Confirmed through multiple independent signals (custodian + client portal pattern + recent job posting, for example). Confidence around 80% to 90%. Most records in this tier.</p>
+                    <p><em>Indicative.</em> Single-signal inference (firm size band suggests Wealthbox, for example) without supporting evidence. Confidence around 50% to 65%. Useful for filtering, not for high-confidence outreach.</p>
+                    <p><em>Unknown.</em> Insufficient signal to infer. Flagged as such rather than guessed.</p>
+                    <p>This tiering matters because most tech-stack vendors quote a single confidence number that hides the underlying variance. A "92% accurate" CRM dataset is usually 95%+ on the easy 60% of firms and 80% on the harder 40%. Tiering lets the buyer use the easy data with confidence and treat the harder data as directional.</p>
+
+                    <p>If you want a stack-segmented list with confidence tiers visible, that's our standard delivery. <a href="/contact/">We'll tell you exactly what we know and what we're inferring</a>.</p>
+
+                </article>
+            </div>
+        </section>
+
+        <section class="section faq-section">
+            <div class="container">
+                <h2 class="section__title">Frequently Asked Questions</h2>
+
+                <details class="faq-item">
+                    <summary class="faq-item__question">Where can I get a list of which CRM each RIA uses?</summary>
+                    <div class="faq-item__answer"><p>There's no single public list. The best sources are vendor partnerships (when available), web fingerprinting of advisor sites, recent job postings, and inference from firm size and channel. Confidence varies by source.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Is custodian data more reliable than CRM data?</summary>
+                    <div class="faq-item__answer"><p>Yes. Custodian is disclosed on Form ADV Item 9 with 95%+ confidence. CRM choice isn't disclosed anywhere public and has to be inferred.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">How do firms migrate between CRMs?</summary>
+                    <div class="faq-item__answer"><p>Migrations typically take 4 to 9 months. The trigger is usually scale (outgrowing the current system), integration needs (consolidating around a new platform), or a major hire who has experience with a different system.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Can I trust BuiltWith-style fingerprinting for advisor tech?</summary>
+                    <div class="faq-item__answer"><p>Partially. BuiltWith and similar tools detect general web tech. Advisor-specific stacks need specialized detection (client portal subdomains, vendor case studies, integration footprints). Accuracy is lower than for general web tech.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Does Form ADV report CRM or planning software?</summary>
+                    <div class="faq-item__answer"><p>No. Form ADV reports custodial relationships, firm structure, and AUM. It doesn't report internal software choices. CRM and planning tool data must come from other sources.</p></div>
+                </details>
+            </div>
+        </section>
+
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-section__header">
+                    <h2 class="cta-section__title">Need verified advisor data?</h2>
+                    <p class="cta-section__text">Tell us your criteria. We build the list.</p>
+                </div>
+                <a href="/contact/" class="btn btn--white btn--lg">Get 20 Free Records</a>
+                <p class="cta-section__proof">FINRA verified &middot; 3-5 day delivery &middot; No annual contracts</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="/" class="footer__logo">
+                        <img src="/assets/icons/icon-no-bg-white.svg" alt="" class="footer__logo-icon" width="28" height="34" loading="lazy">
+                        <span class="footer__logo-text">Fiducia</span>
+                    </a>
+                    <p class="footer__tagline">Financial Advisor Intelligence</p>
+                </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Advisor Types</h4>
+                <ul class="footer__links">
+                    <li><a href="/advisors/ria/">Registered Investment Advisors</a></li>
+<li><a href="/advisors/broker-dealer/">Broker-Dealer Reps</a></li>
+<li><a href="/advisors/cfp/">Certified Financial Planners</a></li>
+<li><a href="/advisors/wealth-management/">Wealth Managers</a></li>
+<li><a href="/advisors/insurance/">Insurance-Licensed Advisors</a></li>
+<li><a href="/advisors/retirement/">Retirement Plan Advisors</a></li>
+<li><a href="/advisors/estate-planning/">Estate Planning Advisors</a></li>
+<li><a href="/advisors/hybrid/">Hybrid/Dual-Registered</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Services</h4>
+                <ul class="footer__links">
+                    <li><a href="/services/advisor-contact-data/">Advisor Contact Data</a></li>
+<li><a href="/services/firm-intelligence/">Firm Intelligence</a></li>
+<li><a href="/services/custom-list-building/">Custom List Building</a></li>
+<li><a href="/services/aum-segmentation/">AUM Segmentation</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">For Your Team</h4>
+                <ul class="footer__links">
+                    <li><a href="/for/custodians/">Custodians</a></li>
+<li><a href="/for/compliance-tech/">Compliance Technology</a></li>
+<li><a href="/for/fintech/">Fintech Platforms</a></li>
+<li><a href="/for/insurance-distributors/">Insurance Distributors</a></li>
+<li><a href="/for/asset-managers/">Asset Managers</a></li>
+<li><a href="/for/financial-recruiting/">Financial Recruiting</a></li>
+<li><a href="/for/wealthtech/">Wealth Tech Vendors</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Compare</h4>
+                <ul class="footer__links">
+                    <li><a href="/compare/vs-zoominfo/">Fiducia vs ZoomInfo</a></li>
+<li><a href="/compare/vs-apollo/">Fiducia vs Apollo</a></li>
+<li><a href="/compare/vs-generic-b2b/">vs Generic B2B Data</a></li>
+<li><a href="/compare/vs-discovery-data/">vs Discovery Data</a></li>
+<li><a href="/alternatives/zoominfo-alternative/">ZoomInfo Alternative</a></li>
+<li><a href="/alternatives/apollo-alternative/">Apollo Alternative</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Company</h4>
+                <ul class="footer__links">
+                    <li><a href="/about/">About Fiducia</a></li>
+<li><a href="/pricing/">Pricing</a></li>
+<li><a href="/contact/">Contact</a></li>
+<li><a href="https://getprovyx.com" target="_blank" rel="noopener noreferrer">Provyx</a></li>
+<li><a href="https://veruminc.com" target="_blank" rel="noopener noreferrer">Verum</a></li>
+<li><a href="https://getvettica.com" target="_blank" rel="noopener noreferrer">Vettica</a></li>
+<li><a href="/privacy/">Privacy Policy</a></li>
+<li><a href="/terms/">Terms of Service</a></li>
+                </ul>
+            </div>
+            </div>
+            <div class="footer__bottom">
+                <span>&copy; 2026 Fiducia. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="consent-banner" class="consent-banner" style="display:none">
+        <p>We use cookies to analyze site traffic and improve your experience. <a href="/privacy/">Privacy Policy</a></p>
+        <div class="consent-banner__actions">
+            <button class="consent-banner__btn consent-banner__btn--accept" onclick="fiduciaConsent('granted')">Accept</button>
+            <button class="consent-banner__btn consent-banner__btn--deny" onclick="fiduciaConsent('denied')">Deny</button>
+        </div>
+    </div>
+    <script>
+    function fiduciaConsent(v){
+      localStorage.setItem('fiducia-consent',v);
+      document.getElementById('consent-banner').style.display='none';
+    }
+    if(!localStorage.getItem('fiducia-consent')){
+      document.getElementById('consent-banner').style.display='';
+    }
+    </script>
+    <script src="/js/main.js" defer></script>
+</body>
+</html>

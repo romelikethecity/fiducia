@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1B2A4A">
+    <title>Form ADV Data Explained: A Field-by-Field Guide</title>
+    <meta name="description" content="Walkthrough of Form ADV Part 1 and 2. AUM, employee count, client types, custody, disciplinary disclosures. What signals matter for outreach.">
+    <link rel="canonical" href="https://getFiducia.com/resources/form-adv-data-explained/">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://getFiducia.com/resources/form-adv-data-explained/">
+    <meta property="og:title" content="Form ADV Data Explained: A Field-by-Field Guide">
+    <meta property="og:description" content="Walkthrough of Form ADV Part 1 and 2. AUM, employee count, client types, custody, disciplinary disclosures. What signals matter for outreach.">
+    <meta property="og:site_name" content="Fiducia">
+    <meta property="og:image" content="https://getFiducia.com/assets/images/og-fiducia.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Form ADV Data Explained: A Field-by-Field Guide">
+    <meta name="twitter:description" content="Walkthrough of Form ADV Part 1 and 2. AUM, employee count, client types, custody, disciplinary disclosures. What signals matter for outreach.">
+    <meta name="twitter:image" content="https://getFiducia.com/assets/images/og-fiducia.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://getFiducia.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Resources",
+      "item": "https://getFiducia.com/resources/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Form ADV Data Explained: A Field-by-Field Guide",
+      "item": "https://getFiducia.com/resources/form-adv-data-explained/"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Form ADV Data Explained: A Field-by-Field Guide",
+  "description": "Walkthrough of Form ADV Part 1 and 2. AUM, employee count, client types, custody, disciplinary disclosures. What signals matter for outreach.",
+  "author": {
+    "@type": "Organization",
+    "name": "Fiducia"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fiducia",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://getFiducia.com/assets/favicons/apple-touch-icon.png"
+    }
+  },
+  "datePublished": "2026-05-14",
+  "dateModified": "2026-05-14",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://getFiducia.com/resources/form-adv-data-explained/"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How often is Form ADV data updated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Firms file an annual amendment within 90 days of fiscal year end, plus other-than-annual amendments when material changes occur. AUM and contact fields are typically refreshed at least once per year, sometimes more often."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between Part 1 and Part 2?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Part 1 is the structured, machine-readable firm filing with enumerated fields. Part 2 is the narrative brochure given to clients. Part 1 is easier to query at scale, Part 2 has qualitative depth."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get Form ADV data for free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The SEC publishes bulk ADV data as downloadable files, and individual filings are available on IAPD. The free data lacks verified contact information, which is where commercial vendors add value."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Form ADV include broker-dealer reps?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Form ADV is for investment advisers under the SEC or state regulators. Broker-dealer rep data lives in Form BD and the FINRA Central Registration Depository (CRD), accessible through BrokerCheck."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the most-overlooked ADV field?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Item 5.D, the client type breakdown. It tells you whether a firm primarily serves individuals, institutions, pensions, or charities, which determines what your pitch should sound like."
+      }
+    }
+  ]
+}
+    </script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg">
+    <link rel="icon" type="image/svg+xml" sizes="16x16" href="/assets/favicons/favicon-16.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+
+    <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/css/styles.css?v=1" as="style">
+    <link rel="stylesheet" href="/assets/fonts/plus-jakarta-sans.min.css">
+    <link rel="stylesheet" href="/css/styles.css?v=1">
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      var _fc = localStorage.getItem('fiducia-consent');
+      if (_fc === 'granted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T86RC0L61S"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-T86RC0L61S');
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="sr-only sr-only--focusable">Skip to main content</a>
+    <header class="header" role="banner">
+        <div class="container header__inner">
+            <a href="/" class="header__logo">
+                <img src="/assets/favicons/favicon.svg" alt="" class="header__logo-icon" width="32" height="32" fetchpriority="high">
+                <span class="header__logo-text">Fiducia</span>
+            </a>
+
+            <nav class="nav--desktop" role="navigation" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Data <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/advisors/" class="nav__dropdown-item">All Advisor Data</a>
+<a href="/advisors/ria/" class="nav__dropdown-item">Registered Investment Advisors</a>
+<a href="/advisors/broker-dealer/" class="nav__dropdown-item">Broker-Dealer Reps</a>
+<a href="/advisors/cfp/" class="nav__dropdown-item">Certified Financial Planners</a>
+<a href="/advisors/wealth-management/" class="nav__dropdown-item">Wealth Managers</a>
+<a href="/advisors/retirement/" class="nav__dropdown-item">Retirement Plan Advisors</a>
+                    </div>
+                </li><li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Services <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/services/advisor-contact-data/" class="nav__dropdown-item">Advisor Contact Data</a>
+<a href="/services/firm-intelligence/" class="nav__dropdown-item">Firm Intelligence</a>
+<a href="/services/custom-list-building/" class="nav__dropdown-item">Custom List Building</a>
+<a href="/services/aum-segmentation/" class="nav__dropdown-item">AUM Segmentation</a>
+                    </div>
+                </li><li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Resources <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/resources/" class="nav__dropdown-item">Guides & Articles</a>
+<a href="/compare/" class="nav__dropdown-item">Comparisons</a>
+<a href="/alternatives/" class="nav__dropdown-item">Alternatives</a>
+<a href="/for/" class="nav__dropdown-item">By Industry</a>
+<a href="/glossary/" class="nav__dropdown-item">Glossary</a>
+                    </div>
+                </li><li><a href="/pricing/" class="nav__link">Pricing</a></li><li><a href="/about/" class="nav__link">About</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__cta">
+                <a href="/contact/" class="btn btn--primary btn--sm">Get 20 Free Records</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span class="menu-toggle__icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav--mobile" role="navigation" aria-label="Mobile navigation">
+        <ul class="nav__list">
+            <li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Data <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/advisors/" class="nav__dropdown-item">All Advisor Data</a>
+<a href="/advisors/ria/" class="nav__dropdown-item">Registered Investment Advisors</a>
+<a href="/advisors/broker-dealer/" class="nav__dropdown-item">Broker-Dealer Reps</a>
+<a href="/advisors/cfp/" class="nav__dropdown-item">Certified Financial Planners</a>
+<a href="/advisors/wealth-management/" class="nav__dropdown-item">Wealth Managers</a>
+<a href="/advisors/retirement/" class="nav__dropdown-item">Retirement Plan Advisors</a>
+                    </div>
+                </li><li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Services <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/services/advisor-contact-data/" class="nav__dropdown-item">Advisor Contact Data</a>
+<a href="/services/firm-intelligence/" class="nav__dropdown-item">Firm Intelligence</a>
+<a href="/services/custom-list-building/" class="nav__dropdown-item">Custom List Building</a>
+<a href="/services/aum-segmentation/" class="nav__dropdown-item">AUM Segmentation</a>
+                    </div>
+                </li><li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Resources <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/resources/" class="nav__dropdown-item">Guides & Articles</a>
+<a href="/compare/" class="nav__dropdown-item">Comparisons</a>
+<a href="/alternatives/" class="nav__dropdown-item">Alternatives</a>
+<a href="/for/" class="nav__dropdown-item">By Industry</a>
+<a href="/glossary/" class="nav__dropdown-item">Glossary</a>
+                    </div>
+                </li><li><a href="/pricing/" class="nav__link">Pricing</a></li><li><a href="/about/" class="nav__link">About</a></li>
+        </ul>
+        <a href="/contact/" class="btn btn--primary">Get 20 Free Records</a>
+    </nav>
+
+    <script>
+    (function(){
+        var toggle=document.querySelector('.menu-toggle');
+        var mobileNav=document.querySelector('.nav--mobile');
+        if(!toggle||!mobileNav)return;
+        toggle.addEventListener('click',function(){
+            var open=mobileNav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            toggle.setAttribute('aria-expanded',open);
+            document.body.style.overflow=open?'hidden':'';
+        });
+        var dropdowns=document.querySelectorAll('.nav__item--dropdown .nav__dropdown-toggle');
+        dropdowns.forEach(function(btn){
+            btn.addEventListener('click',function(e){
+                e.preventDefault();
+                var parent=btn.closest('.nav__item--dropdown');
+                var wasActive=parent.classList.contains('active');
+                if(mobileNav.contains(parent)){
+                    mobileNav.querySelectorAll('.nav__item--dropdown.active').forEach(function(d){d.classList.remove('active');d.querySelector('.nav__dropdown-toggle').setAttribute('aria-expanded','false');});
+                }
+                if(!wasActive){
+                    parent.classList.add('active');
+                    btn.setAttribute('aria-expanded','true');
+                }else{
+                    parent.classList.remove('active');
+                    btn.setAttribute('aria-expanded','false');
+                }
+            });
+        });
+    })();
+    </script>
+
+    <main id="main-content">
+
+        <section class="page-hero">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="https://getFiducia.com">Home</a> <span class="breadcrumb__separator">/</span> <a href="https://getFiducia.com/resources/">Resources</a> <span class="breadcrumb__separator">/</span> <span class="breadcrumb__current">Form ADV Data Explained: A Field-by-Field Guide</span>
+        </nav>
+                <h1 class="page-hero__title">Form ADV Data Explained: A Field-by-Field Guide</h1>
+                <p class="page-hero__subtitle">A walkthrough of every Form ADV field that matters for sales outreach. AUM, client types, custody, disciplinary history, and the signals most people miss.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <article class="content__body">
+
+                    <p>Form ADV is the registration filing every investment adviser submits to the SEC or to a state regulator. It's the single richest public document for understanding what an RIA does, who they serve, and how they're structured. If you sell to advisors, the ADV is your homework.</p>
+
+                    <p>Most sales teams treat the ADV as a black box. They pull AUM from a vendor and stop. That's a mistake. The ADV has 100+ structured fields plus a free-text brochure. Half of them carry sales signal. Here's how to read it.</p>
+
+                    <h2>Part 1A: The Structured Schedule</h2>
+                    <p>Part 1A is the firm-level filing. Almost every field is enumerated or numeric, which makes it easy to query at scale.</p>
+
+                    <h3>Item 1: Identifying Information</h3>
+                    <p>Legal name, primary business name, CRD number, SEC file number, main office address, contact person, contact email. The contact email here is usually a compliance address, not the person you want to reach. Useful for verification, weak as an outreach target.</p>
+
+                    <h3>Item 2: SEC Registration</h3>
+                    <p>The basis for SEC registration. Most firms register because they exceed the $100M AUM threshold. Some register under specific exemptions (pension consulting, multi-state, internet adviser). The basis tells you the firm's scale category at a glance.</p>
+
+                    <h3>Item 5: Information About Your Advisory Business</h3>
+                    <p>This is the meatiest section. Item 5.A is total employees and number of advisory employees. Item 5.B is the breakdown by role. Item 5.D is client types and counts. Item 5.F is regulatory assets under management split into discretionary and non-discretionary. Item 5.G is advisory activities offered.</p>
+
+                    <p>The signal here is dense. A firm with 40 employees but only 8 advisory employees probably has a heavy operations or back-office layer, which usually means scale. A firm with 200 high-net-worth client accounts and $400M AUM has an average account of $2M, which tells you their service model. A firm reporting wrap fee programs likely has a relationship with a custodian or platform sponsor.</p>
+
+                    <h3>Item 7: Financial Industry Affiliations</h3>
+                    <p>This is where you learn if the firm has a related broker-dealer, a related insurance company, or other affiliated financial entities. Hybrid RIAs show their BD affiliation here. If you're targeting fee-only firms, Item 7 is the disqualifier check.</p>
+
+                    <h3>Item 8: Participation or Interest in Client Transactions</h3>
+                    <p>Disclosures around principal trades, agency cross trades, soft dollars, and recommended securities. For most outreach this is noise. For compliance-tech vendors it's gold, because it identifies firms with complex trade-supervision needs.</p>
+
+                    <h3>Item 9: Custody</h3>
+                    <p>Whether the firm has custody of client assets, by whom, and the amounts. Most modern RIAs don't have direct custody. Firms that do are either large enough to operate as their own custodian or operate in a specialized model. Custody disclosure plus an Item 9 surprise-audit response is a strong signal of operational maturity.</p>
+
+                    <h3>Item 11: Disciplinary Information</h3>
+                    <p>Disclosures of regulatory, civil, or criminal events involving the firm or its principals. Heavy disclosures are a yellow flag. For some sales contexts (compliance software, E&amp;O insurance, M&amp;A intermediaries) heavy disclosures are a positive signal because they indicate need.</p>
+
+                    <h2>Part 1B: For State-Registered Advisers</h2>
+                    <p>If a firm is state-registered (typically under $100M AUM), they file Part 1B in addition to Part 1A. It adds bond/insurance disclosures and some state-specific items. State-registered advisers are usually smaller and earlier in their growth, which makes them an interesting cohort for technology vendors targeting emerging RIAs.</p>
+
+                    <h2>Part 2A: The Firm Brochure</h2>
+                    <p>Part 2A is the narrative brochure that the firm gives clients. It's plain English (mostly) and runs 20 to 80 pages. The signal here is qualitative, but it's where firms describe their actual investment process, fee structure, and minimum account size. The brochure tells you whether a firm runs a fee-only fiduciary model with planning, a portfolio model on a custodial platform, or a hybrid commission-and-fee model.</p>
+
+                    <p>The brochure at scale is hard to read, but you can extract structured signal: minimum account size, fee schedule (basis points or flat fees), and whether the firm uses sub-advisors or third-party managers. Those three fields alone segment the universe meaningfully.</p>
+
+                    <h2>Part 2B: Supplemental Brochure</h2>
+                    <p>Part 2B is the brochure supplement for individual advisors. It has each rep's education, designations, business background, and disciplinary history. If your outreach is rep-level rather than firm-level, Part 2B is your primary identity source. CFP, CFA, ChFC, and similar designations are listed here verbatim.</p>
+
+                    <h2>What to Pull for Sales</h2>
+                    <p>If we were building a fresh outreach segment from ADV alone, we'd pull:</p>
+                    <ul>
+                        <li>Firm name, CRD, SEC file number, primary office</li>
+                        <li>Total employees, advisory employees (Item 5.A and 5.B)</li>
+                        <li>Regulatory AUM, discretionary and non-discretionary (Item 5.F)</li>
+                        <li>Client type breakdown (Item 5.D)</li>
+                        <li>Advisory services offered (Item 5.G)</li>
+                        <li>Financial industry affiliations (Item 7)</li>
+                        <li>Custody disclosures (Item 9)</li>
+                        <li>Disciplinary disclosures (Item 11)</li>
+                        <li>Principal officers from Schedule A</li>
+                        <li>Designations of named reps from Part 2B</li>
+                    </ul>
+                    <p>That's enough to segment by AUM band, service model, registration channel, and rep credentials. The piece you still need is verified contact data, because ADV gives you the compliance email and not the principal's inbox. <a href="/services/advisor-contact-data/">That's where we come in</a>.</p>
+
+                    <h2>A Few Watch-Outs</h2>
+                    <p>ADV data has lags. Most firms file an annual amendment within 90 days of fiscal year end, plus other-than-annual amendments when material changes happen. The AUM you see may be 3 to 12 months stale. For most outreach that's fine. For high-precision deal targeting it's worth verifying recent press releases or hires.</p>
+
+                    <p>State-registered filings have inconsistent quality. Some states require more, some less, and small RIAs sometimes file sparsely. If your ICP includes sub-$100M firms, expect more cleanup. We do this cleanup as part of every list we build.</p>
+
+                    <h2>The Items Most Sales Teams Skip</h2>
+                    <p>A few ADV fields carry strong signal but rarely get used. Worth pulling.</p>
+
+                    <p><em>Item 5.K (separately managed accounts).</em> If a firm offers SMAs, they have a manager-research function and a relationship with one or more SMA platform providers (typically Envestnet, FundQuest, AssetMark, Orion). For asset managers and wealth-platform vendors, this is a high-signal field.</p>
+
+                    <p><em>Item 5.J (wrap fee programs).</em> Reporting wrap fee programs as a sponsor or portfolio manager is a strong signal of platform sophistication and channel relationships. For technology vendors selling rebalancing, performance reporting, or trading tools, wrap-fee status indicates buying intent.</p>
+
+                    <p><em>Item 6 (other business activities).</em> Tells you what else the firm does beyond advisory. A firm with a related insurance agency, a related accounting practice, or a related trust company has different cross-sell behavior and different software needs.</p>
+
+                    <p><em>Item 10 (control persons).</em> Identifies the controlling entities and individuals beyond direct ownership. For M&amp;A targeting, this surfaces aggregator-owned subsidiaries that don't always show their parent on the front of the brochure.</p>
+
+                    <p><em>Schedule R (related advisers).</em> Lists other investment advisers under common control. This is how you map multi-entity RIA platforms and understand the real scope of a parent firm.</p>
+
+                    <h2>Reading ADV at Scale</h2>
+                    <p>The SEC publishes ADV bulk data as downloadable XML and CSV. The full dataset for SEC-registered firms is several gigabytes uncompressed. Parsing is straightforward in any language that handles large XML well.</p>
+
+                    <p>Schema changes happen. The SEC has revised ADV multiple times over the past decade, and historical filings use older schemas. If you're loading historical data for trajectory analysis, expect to maintain schema-version logic. Most teams treat the current schema as the canonical version and only pull historical data for specific use cases (M&amp;A targeting, growth-trajectory segmentation).</p>
+
+                    <p>State-registered RIAs file with their state regulator. NASAA aggregates some of this data through IARD, but state-level access varies. A few states (notably Texas, California, New York) publish good downloadable data. Others require manual scraping. If your ICP includes a lot of sub-$100M firms, plan for per-state data collection or use a vendor that already does this.</p>
+
+                    <h2>Using ADV in Outreach</h2>
+                    <p>The single best outreach use of ADV is segmentation precision. Generic B2B lists send the same message to firms that are wildly different on AUM, services, and client mix. ADV-segmented lists let you write a message for the $300M fee-only RIA that's different from the message for the $900M hybrid. Conversion rates on segmented messages run 2 to 4 times higher than on broad sends.</p>
+
+                    <p>The second-best use is timing. ADV annual amendments cluster in March, April, and May. Firms that just filed an amendment showing significant AUM growth or new service launches are in a buying frame. Setting an alert on ADV amendments for your watchlist accounts gives you a near-real-time pipeline trigger. <a href="/services/firm-intelligence/">Our firm intelligence service does this monitoring</a>.</p>
+
+                    <p>If you want a segmented and verified ADV-based list with the contact data already attached, that's our core service. <a href="/services/advisor-contact-data/">Tell us your criteria and we'll build it</a>.</p>
+
+                </article>
+            </div>
+        </section>
+
+        <section class="section faq-section">
+            <div class="container">
+                <h2 class="section__title">Frequently Asked Questions</h2>
+
+                <details class="faq-item">
+                    <summary class="faq-item__question">How often is Form ADV data updated?</summary>
+                    <div class="faq-item__answer"><p>Firms file an annual amendment within 90 days of fiscal year end, plus other-than-annual amendments when material changes occur. AUM and contact fields are typically refreshed at least once per year, sometimes more often.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">What's the difference between Part 1 and Part 2?</summary>
+                    <div class="faq-item__answer"><p>Part 1 is the structured, machine-readable firm filing with enumerated fields. Part 2 is the narrative brochure given to clients. Part 1 is easier to query at scale, Part 2 has qualitative depth.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Can I get Form ADV data for free?</summary>
+                    <div class="faq-item__answer"><p>Yes. The SEC publishes bulk ADV data as downloadable files, and individual filings are available on IAPD. The free data lacks verified contact information, which is where commercial vendors add value.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Does Form ADV include broker-dealer reps?</summary>
+                    <div class="faq-item__answer"><p>No. Form ADV is for investment advisers under the SEC or state regulators. Broker-dealer rep data lives in Form BD and the FINRA Central Registration Depository (CRD), accessible through BrokerCheck.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">What's the most-overlooked ADV field?</summary>
+                    <div class="faq-item__answer"><p>Item 5.D, the client type breakdown. It tells you whether a firm primarily serves individuals, institutions, pensions, or charities, which determines what your pitch should sound like.</p></div>
+                </details>
+            </div>
+        </section>
+
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-section__header">
+                    <h2 class="cta-section__title">Need verified advisor data?</h2>
+                    <p class="cta-section__text">Tell us your criteria. We build the list.</p>
+                </div>
+                <a href="/contact/" class="btn btn--white btn--lg">Get 20 Free Records</a>
+                <p class="cta-section__proof">FINRA verified &middot; 3-5 day delivery &middot; No annual contracts</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="/" class="footer__logo">
+                        <img src="/assets/icons/icon-no-bg-white.svg" alt="" class="footer__logo-icon" width="28" height="34" loading="lazy">
+                        <span class="footer__logo-text">Fiducia</span>
+                    </a>
+                    <p class="footer__tagline">Financial Advisor Intelligence</p>
+                </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Advisor Types</h4>
+                <ul class="footer__links">
+                    <li><a href="/advisors/ria/">Registered Investment Advisors</a></li>
+<li><a href="/advisors/broker-dealer/">Broker-Dealer Reps</a></li>
+<li><a href="/advisors/cfp/">Certified Financial Planners</a></li>
+<li><a href="/advisors/wealth-management/">Wealth Managers</a></li>
+<li><a href="/advisors/insurance/">Insurance-Licensed Advisors</a></li>
+<li><a href="/advisors/retirement/">Retirement Plan Advisors</a></li>
+<li><a href="/advisors/estate-planning/">Estate Planning Advisors</a></li>
+<li><a href="/advisors/hybrid/">Hybrid/Dual-Registered</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Services</h4>
+                <ul class="footer__links">
+                    <li><a href="/services/advisor-contact-data/">Advisor Contact Data</a></li>
+<li><a href="/services/firm-intelligence/">Firm Intelligence</a></li>
+<li><a href="/services/custom-list-building/">Custom List Building</a></li>
+<li><a href="/services/aum-segmentation/">AUM Segmentation</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">For Your Team</h4>
+                <ul class="footer__links">
+                    <li><a href="/for/custodians/">Custodians</a></li>
+<li><a href="/for/compliance-tech/">Compliance Technology</a></li>
+<li><a href="/for/fintech/">Fintech Platforms</a></li>
+<li><a href="/for/insurance-distributors/">Insurance Distributors</a></li>
+<li><a href="/for/asset-managers/">Asset Managers</a></li>
+<li><a href="/for/financial-recruiting/">Financial Recruiting</a></li>
+<li><a href="/for/wealthtech/">Wealth Tech Vendors</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Compare</h4>
+                <ul class="footer__links">
+                    <li><a href="/compare/vs-zoominfo/">Fiducia vs ZoomInfo</a></li>
+<li><a href="/compare/vs-apollo/">Fiducia vs Apollo</a></li>
+<li><a href="/compare/vs-generic-b2b/">vs Generic B2B Data</a></li>
+<li><a href="/compare/vs-discovery-data/">vs Discovery Data</a></li>
+<li><a href="/alternatives/zoominfo-alternative/">ZoomInfo Alternative</a></li>
+<li><a href="/alternatives/apollo-alternative/">Apollo Alternative</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Company</h4>
+                <ul class="footer__links">
+                    <li><a href="/about/">About Fiducia</a></li>
+<li><a href="/pricing/">Pricing</a></li>
+<li><a href="/contact/">Contact</a></li>
+<li><a href="https://getprovyx.com" target="_blank" rel="noopener noreferrer">Provyx</a></li>
+<li><a href="https://veruminc.com" target="_blank" rel="noopener noreferrer">Verum</a></li>
+<li><a href="https://getvettica.com" target="_blank" rel="noopener noreferrer">Vettica</a></li>
+<li><a href="/privacy/">Privacy Policy</a></li>
+<li><a href="/terms/">Terms of Service</a></li>
+                </ul>
+            </div>
+            </div>
+            <div class="footer__bottom">
+                <span>&copy; 2026 Fiducia. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="consent-banner" class="consent-banner" style="display:none">
+        <p>We use cookies to analyze site traffic and improve your experience. <a href="/privacy/">Privacy Policy</a></p>
+        <div class="consent-banner__actions">
+            <button class="consent-banner__btn consent-banner__btn--accept" onclick="fiduciaConsent('granted')">Accept</button>
+            <button class="consent-banner__btn consent-banner__btn--deny" onclick="fiduciaConsent('denied')">Deny</button>
+        </div>
+    </div>
+    <script>
+    function fiduciaConsent(v){
+      localStorage.setItem('fiducia-consent',v);
+      document.getElementById('consent-banner').style.display='none';
+    }
+    if(!localStorage.getItem('fiducia-consent')){
+      document.getElementById('consent-banner').style.display='';
+    }
+    </script>
+    <script src="/js/main.js" defer></script>
+</body>
+</html>

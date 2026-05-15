@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1B2A4A">
+    <title>How to Build an RIA List: The Practical Playbook</title>
+    <meta name="description" content="End-to-end methodology for building a verified RIA list. IAPD, SEC EDGAR, state filings, BrokerCheck, contact enrichment, validation.">
+    <link rel="canonical" href="https://getFiducia.com/resources/how-to-build-an-ria-list/">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://getFiducia.com/resources/how-to-build-an-ria-list/">
+    <meta property="og:title" content="How to Build an RIA List: The Practical Playbook">
+    <meta property="og:description" content="End-to-end methodology for building a verified RIA list. IAPD, SEC EDGAR, state filings, BrokerCheck, contact enrichment, validation.">
+    <meta property="og:site_name" content="Fiducia">
+    <meta property="og:image" content="https://getFiducia.com/assets/images/og-fiducia.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Build an RIA List: The Practical Playbook">
+    <meta name="twitter:description" content="End-to-end methodology for building a verified RIA list. IAPD, SEC EDGAR, state filings, BrokerCheck, contact enrichment, validation.">
+    <meta name="twitter:image" content="https://getFiducia.com/assets/images/og-fiducia.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://getFiducia.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Resources",
+      "item": "https://getFiducia.com/resources/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "How to Build an RIA List: An End-to-End Playbook",
+      "item": "https://getFiducia.com/resources/how-to-build-an-ria-list/"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Build an RIA List: An End-to-End Playbook",
+  "description": "End-to-end methodology for building a verified RIA list. IAPD, SEC EDGAR, state filings, BrokerCheck, contact enrichment, validation.",
+  "author": {
+    "@type": "Organization",
+    "name": "Fiducia"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fiducia",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://getFiducia.com/assets/favicons/apple-touch-icon.png"
+    }
+  },
+  "datePublished": "2026-05-14",
+  "dateModified": "2026-05-14",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://getFiducia.com/resources/how-to-build-an-ria-list/"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does it take to build an RIA list from scratch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A first version takes 4 to 8 engineering weeks if you're starting from raw IAPD and FINRA data. Ongoing maintenance is another 0.25 to 0.5 FTE depending on freshness requirements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is IAPD data free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The SEC publishes Form ADV bulk data as a free download. FINRA BrokerCheck data is also public but has more access friction and no clean bulk export."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the most common mistake in building an RIA list?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Treating the ADV-listed compliance email as the right outreach target. It's not. You need person-level enrichment for principals, COOs, CIOs, or CCOs depending on your product."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I refresh an RIA list?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Firm and AUM data: quarterly. Contact deliverability: monthly. Per-campaign validation: every time. Annual rebuilds align with Form ADV annual amendment season (spring)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I build a state-registered RIA list the same way?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Partially. State-registered firms file with their state regulator, not always with the SEC. Each state's data quality and access varies. NASAA aggregates some data, but state-by-state pulls are often required."
+      }
+    }
+  ]
+}
+    </script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg">
+    <link rel="icon" type="image/svg+xml" sizes="16x16" href="/assets/favicons/favicon-16.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+
+    <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/css/styles.css?v=1" as="style">
+    <link rel="stylesheet" href="/assets/fonts/plus-jakarta-sans.min.css">
+    <link rel="stylesheet" href="/css/styles.css?v=1">
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      var _fc = localStorage.getItem('fiducia-consent');
+      if (_fc === 'granted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T86RC0L61S"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-T86RC0L61S');
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="sr-only sr-only--focusable">Skip to main content</a>
+    <header class="header" role="banner">
+        <div class="container header__inner">
+            <a href="/" class="header__logo">
+                <img src="/assets/favicons/favicon.svg" alt="" class="header__logo-icon" width="32" height="32" fetchpriority="high">
+                <span class="header__logo-text">Fiducia</span>
+            </a>
+
+            <nav class="nav--desktop" role="navigation" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Data <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/advisors/" class="nav__dropdown-item">All Advisor Data</a>
+<a href="/advisors/ria/" class="nav__dropdown-item">Registered Investment Advisors</a>
+<a href="/advisors/broker-dealer/" class="nav__dropdown-item">Broker-Dealer Reps</a>
+<a href="/advisors/cfp/" class="nav__dropdown-item">Certified Financial Planners</a>
+<a href="/advisors/wealth-management/" class="nav__dropdown-item">Wealth Managers</a>
+<a href="/advisors/retirement/" class="nav__dropdown-item">Retirement Plan Advisors</a>
+                    </div>
+                </li><li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Services <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/services/advisor-contact-data/" class="nav__dropdown-item">Advisor Contact Data</a>
+<a href="/services/firm-intelligence/" class="nav__dropdown-item">Firm Intelligence</a>
+<a href="/services/custom-list-building/" class="nav__dropdown-item">Custom List Building</a>
+<a href="/services/aum-segmentation/" class="nav__dropdown-item">AUM Segmentation</a>
+                    </div>
+                </li><li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Resources <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/resources/" class="nav__dropdown-item">Guides & Articles</a>
+<a href="/compare/" class="nav__dropdown-item">Comparisons</a>
+<a href="/alternatives/" class="nav__dropdown-item">Alternatives</a>
+<a href="/for/" class="nav__dropdown-item">By Industry</a>
+<a href="/glossary/" class="nav__dropdown-item">Glossary</a>
+                    </div>
+                </li><li><a href="/pricing/" class="nav__link">Pricing</a></li><li><a href="/about/" class="nav__link">About</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__cta">
+                <a href="/contact/" class="btn btn--primary btn--sm">Get 20 Free Records</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span class="menu-toggle__icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav--mobile" role="navigation" aria-label="Mobile navigation">
+        <ul class="nav__list">
+            <li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Data <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/advisors/" class="nav__dropdown-item">All Advisor Data</a>
+<a href="/advisors/ria/" class="nav__dropdown-item">Registered Investment Advisors</a>
+<a href="/advisors/broker-dealer/" class="nav__dropdown-item">Broker-Dealer Reps</a>
+<a href="/advisors/cfp/" class="nav__dropdown-item">Certified Financial Planners</a>
+<a href="/advisors/wealth-management/" class="nav__dropdown-item">Wealth Managers</a>
+<a href="/advisors/retirement/" class="nav__dropdown-item">Retirement Plan Advisors</a>
+                    </div>
+                </li><li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Services <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/services/advisor-contact-data/" class="nav__dropdown-item">Advisor Contact Data</a>
+<a href="/services/firm-intelligence/" class="nav__dropdown-item">Firm Intelligence</a>
+<a href="/services/custom-list-building/" class="nav__dropdown-item">Custom List Building</a>
+<a href="/services/aum-segmentation/" class="nav__dropdown-item">AUM Segmentation</a>
+                    </div>
+                </li><li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Resources <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/resources/" class="nav__dropdown-item">Guides & Articles</a>
+<a href="/compare/" class="nav__dropdown-item">Comparisons</a>
+<a href="/alternatives/" class="nav__dropdown-item">Alternatives</a>
+<a href="/for/" class="nav__dropdown-item">By Industry</a>
+<a href="/glossary/" class="nav__dropdown-item">Glossary</a>
+                    </div>
+                </li><li><a href="/pricing/" class="nav__link">Pricing</a></li><li><a href="/about/" class="nav__link">About</a></li>
+        </ul>
+        <a href="/contact/" class="btn btn--primary">Get 20 Free Records</a>
+    </nav>
+
+    <script>
+    (function(){
+        var toggle=document.querySelector('.menu-toggle');
+        var mobileNav=document.querySelector('.nav--mobile');
+        if(!toggle||!mobileNav)return;
+        toggle.addEventListener('click',function(){
+            var open=mobileNav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            toggle.setAttribute('aria-expanded',open);
+            document.body.style.overflow=open?'hidden':'';
+        });
+        var dropdowns=document.querySelectorAll('.nav__item--dropdown .nav__dropdown-toggle');
+        dropdowns.forEach(function(btn){
+            btn.addEventListener('click',function(e){
+                e.preventDefault();
+                var parent=btn.closest('.nav__item--dropdown');
+                var wasActive=parent.classList.contains('active');
+                if(mobileNav.contains(parent)){
+                    mobileNav.querySelectorAll('.nav__item--dropdown.active').forEach(function(d){d.classList.remove('active');d.querySelector('.nav__dropdown-toggle').setAttribute('aria-expanded','false');});
+                }
+                if(!wasActive){
+                    parent.classList.add('active');
+                    btn.setAttribute('aria-expanded','true');
+                }else{
+                    parent.classList.remove('active');
+                    btn.setAttribute('aria-expanded','false');
+                }
+            });
+        });
+    })();
+    </script>
+
+    <main id="main-content">
+
+        <section class="page-hero">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="https://getFiducia.com">Home</a> <span class="breadcrumb__separator">/</span> <a href="https://getFiducia.com/resources/">Resources</a> <span class="breadcrumb__separator">/</span> <span class="breadcrumb__current">How to Build an RIA List: An End-to-End Playbook</span>
+        </nav>
+                <h1 class="page-hero__title">How to Build an RIA List: An End-to-End Playbook</h1>
+                <p class="page-hero__subtitle">An end-to-end methodology for building a verified RIA list. From IAPD and EDGAR to validated contact data, with the gotchas at every step.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <article class="content__body">
+
+                    <p>An RIA list built from scratch is one of those projects that looks straightforward and turns out to be a six-week engineering effort if you do it well. We've built and rebuilt this pipeline many times. Here's the playbook with the gotchas at every step.</p>
+
+                    <h2>Step 1: Decide What "RIA" Means for Your List</h2>
+                    <p>Sounds obvious. It's not. "RIA" can mean:</p>
+                    <ul>
+                        <li>SEC-registered investment advisers only (firms over $100M AUM)</li>
+                        <li>SEC + state-registered (every regulated investment adviser)</li>
+                        <li>Pure-play fee-only RIAs (excluding hybrids with BD affiliation)</li>
+                        <li>Hybrids (firms with both RIA and BD affiliation)</li>
+                        <li>Specific advisor reps (IARs), not the firms themselves</li>
+                    </ul>
+                    <p>Each definition produces a different list. The SEC-only universe is about 15,000 firms. SEC + state is closer to 35,000 firms. IARs (individual reps) number in the hundreds of thousands. <a href="/resources/ria-vs-broker-dealer-vs-hybrid/">We cover the channel distinctions in detail here</a>.</p>
+
+                    <p>Most outreach use cases want SEC + selected state-registered firms over a minimum AUM threshold. Pick before you start.</p>
+
+                    <h2>Step 2: Pull the Universe from IAPD</h2>
+                    <p>IAPD (Investment Adviser Public Disclosure) is the SEC's free public portal for investment adviser data. The full dataset is downloadable as Form ADV bulk files. You want:</p>
+                    <ul>
+                        <li>The Investment Adviser Firm Summary file (firm-level data)</li>
+                        <li>The Investment Adviser Representative file (IAR data)</li>
+                        <li>The Form ADV Part 1A and Schedule A/B files (filing details)</li>
+                    </ul>
+                    <p>These are large XML or CSV files. Plan for a few gigabytes uncompressed. Parse with care. The schema changes occasionally and historical filings have different formats than current ones.</p>
+
+                    <p>The IAPD bulk download covers SEC-registered firms thoroughly. State-only firms file with their state regulator and not always with the SEC. If you need state-registered firms, you have to pull from each state separately, which is its own project.</p>
+
+                    <h2>Step 3: Cross-Reference FINRA BrokerCheck</h2>
+                    <p>If your list includes broker-dealer activity or hybrid registration data, FINRA BrokerCheck is the parallel source. BrokerCheck doesn't have a clean bulk download (their API is restrictive and rate-limited), but you can pull individual CRD records and aggregate. For hybrid firm identification, you need both ADV and BD registration data linked by CRD number.</p>
+
+                    <p>FINRA also publishes the BD Database (Form BD filings) which is the parallel of ADV for broker-dealers. If you need any BD data this is your source.</p>
+
+                    <h2>Step 4: Pull Form ADV Detail</h2>
+                    <p>Once you have the firm universe, pull the rich Form ADV detail for each firm. The key items:</p>
+                    <ul>
+                        <li>Item 1 (identifying info, address, contact email)</li>
+                        <li>Item 5 (employees, AUM, client types, services)</li>
+                        <li>Item 7 (affiliations)</li>
+                        <li>Item 9 (custody)</li>
+                        <li>Item 11 (disciplinary)</li>
+                        <li>Schedule A (direct owners and officers)</li>
+                        <li>Schedule B (indirect owners)</li>
+                    </ul>
+                    <p>Schedule A is the goldmine. It names the principal officers, their ownership percentage, their CRD number, and their start date. This is how you identify the controlling principal at every firm.</p>
+
+                    <h2>Step 5: Apply Your Criteria</h2>
+                    <p>With the full firm-and-officer dataset loaded, apply your filters:</p>
+                    <ul>
+                        <li>AUM band (Item 5.F)</li>
+                        <li>Client type composition (Item 5.D)</li>
+                        <li>Affiliation status (Item 7)</li>
+                        <li>Custody model (Item 9)</li>
+                        <li>Disciplinary history (Item 11)</li>
+                        <li>Geographic location (Item 1)</li>
+                        <li>Firm age and growth trajectory (year-over-year AUM)</li>
+                    </ul>
+                    <p>A typical campaign filter (SEC-registered RIAs, $250M to $1B AUM, no BD affiliation, primary residence in target states, no significant disciplinary disclosures) cuts the 15,000-firm SEC universe to 1,500 to 2,500 firms.</p>
+
+                    <h2>Step 6: Identify the Right Person</h2>
+                    <p>Schedule A gives you the principal officers. The right outreach target depends on your product:</p>
+                    <ul>
+                        <li>For tech and platform decisions: the COO, Director of Operations, or CTO. At small firms this is the controlling principal.</li>
+                        <li>For investment-related decisions: the CIO or head of investments.</li>
+                        <li>For compliance products: the CCO.</li>
+                        <li>For M&amp;A or financing: the controlling principal or CEO.</li>
+                    </ul>
+
+                    <p>Form ADV lists officers but doesn't classify their functional role beyond title. You often need to enrich with LinkedIn or firm-website data to identify the right functional contact.</p>
+
+                    <h2>Step 7: Verified Contact Enrichment</h2>
+                    <p>This is the step most teams underestimate. The ADV gives you the firm address and the compliance email. It doesn't give you the principal's direct email or mobile. Enrichment options:</p>
+                    <ul>
+                        <li>Generic B2B databases (ZoomInfo, Apollo, Cognism) for email + phone, with deliverability checking</li>
+                        <li>LinkedIn-derived data via dedicated tools (RocketReach, ContactOut)</li>
+                        <li>Direct outreach to firm websites to find named officer email patterns, then validation</li>
+                        <li>Specialist advisor-data vendors (us, AdvizorPro) that bundle enrichment</li>
+                    </ul>
+
+                    <p>Whatever your method, run email validation before sending. We use a multi-step verification including MX lookup, SMTP check, and recent-activity validation. Expect 80% to 90% deliverability for well-enriched principal-level contacts. Lower and your bounces will damage your sending domain.</p>
+
+                    <h2>Step 8: Validate and Sample-Test</h2>
+                    <p>Before launching a full campaign, manually check 25 to 50 records from your list. Confirm:</p>
+                    <ul>
+                        <li>The firm is who you think it is (correct channel, AUM band, services)</li>
+                        <li>The named person is currently with the firm (LinkedIn check)</li>
+                        <li>The email format matches the firm's other public email patterns</li>
+                        <li>The phone, if direct-dial, is reachable</li>
+                    </ul>
+                    <p>If your manual-check error rate is over 10%, fix the pipeline before going broader. This step is non-negotiable.</p>
+
+                    <h2>Step 9: Refresh Cadence</h2>
+                    <p>RIA data has decay. Principals leave, firms merge, AUM changes, registrations lapse. Annual ADV amendments rebuild much of the universe every spring. Plan a refresh cadence:</p>
+                    <ul>
+                        <li>Quarterly: rebuild AUM and firm-status data</li>
+                        <li>Monthly: re-check email deliverability on stale records</li>
+                        <li>Per-campaign: validate the actual list you're about to email</li>
+                    </ul>
+
+                    <h2>When to Outsource</h2>
+                    <p>If you're a wealthtech or fintech company running quarterly campaigns and don't have dedicated data engineering, outsource. The pipeline above takes 4 to 8 engineering weeks to build, plus ongoing maintenance. <a href="/services/custom-list-building/">We've already built it and can deliver a list in 3 to 5 business days</a>.</p>
+
+                    <p>If you have data engineering and run continuous campaigns, build it in-house. The economics flip above about 200,000 records per year of usage.</p>
+
+                    <h2>Pipeline Architecture Patterns</h2>
+                    <p>Three patterns we've seen work for sustained RIA-list pipelines.</p>
+
+                    <p><em>The batch refresh pattern.</em> Pull bulk IAPD and ADV data monthly. Normalize and de-duplicate. Apply current filter criteria. Run enrichment against a contact-data vendor. Output a fresh CSV monthly. Simple, reliable, and good enough for most quarterly outreach motions.</p>
+
+                    <p><em>The streaming pattern.</em> Subscribe to ADV amendment feeds (if your vendor exposes them) or poll the IAPD search API. Detect changes (new registrations, amendment filings, AUM changes) and trigger enrichment workflows for changed firms only. Higher complexity but better data freshness. Used by teams that monitor watchlists.</p>
+
+                    <p><em>The hybrid pattern.</em> Maintain a base list refreshed quarterly. Run streaming detection on a watchlist subset (top 500 to 2,000 target accounts). Trigger high-value alerts on watchlist firms while keeping the broader universe fresh enough for cold outreach. This is what most enterprise wealthtech teams settle on.</p>
+
+                    <h2>The Cost of Bad Data</h2>
+                    <p>If you skip any of the steps above, the cost shows up downstream. Specific failure modes we've seen:</p>
+                    <ul>
+                        <li>Sending to outdated emails: a 25% bounce rate damages your sender reputation and depresses inbox placement for 4 to 6 weeks afterward.</li>
+                        <li>Targeting wrong-channel firms: pitching RIA software to bank-trust-department contacts wastes AE cycles and frustrates good prospects who get the wrong pitch.</li>
+                        <li>Mis-classified AUM: pitching enterprise pricing to a $200M emerging RIA kills the deal in the first call.</li>
+                        <li>Wrong functional contact: hitting the office manager instead of the CIO loses an entire outreach cycle and resets the firm's interest level.</li>
+                    </ul>
+
+                    <p>The pipeline above seems heavy because it is. Each step exists because we've watched teams skip it and lose campaigns. The good news is that once the pipeline is built, the marginal cost per list is low.</p>
+
+                    <h2>Tools That Help</h2>
+                    <p>If you're building in-house, a few tools are worth knowing.</p>
+                    <p><strong>For ADV bulk parsing:</strong> Python with lxml or Polars handles the XML well. The SEC's documentation is sparse but the schema is documented in the Form ADV instructions.</p>
+                    <p><strong>For FINRA CRD lookups:</strong> there's no public API. Most teams scrape (carefully, with rate limiting) or buy access through a data vendor.</p>
+                    <p><strong>For contact enrichment:</strong> Apollo, ZoomInfo, and Cognism for breadth. NeverBounce, ZeroBounce, or Kickbox for email validation. We use a multi-vendor cascade with our own quality scoring on top.</p>
+                    <p><strong>For LinkedIn-derived data:</strong> RocketReach, ContactOut, and Hunter cover most needs. Direct LinkedIn scraping violates ToS and is risky.</p>
+                    <p><strong>For ADV-amendment monitoring:</strong> the SEC's EDGAR full-text RSS feed plus a parser. Or use a vendor that's already done this.</p>
+
+                    <p>If you'd rather not build the pipeline, the standard build above is roughly what we run for every list. <a href="/contact/">Send us the criteria and the list shows up in 3 to 5 business days</a>.</p>
+
+                    <h2>Sanity-Checking Your Pipeline</h2>
+                    <p>A few sanity checks to run on any RIA list, whether you built it or bought it.</p>
+                    <p><em>Total count.</em> SEC-registered RIAs number around 15,000. SEC plus state-registered is closer to 35,000. If your full-universe count is wildly different, you have a problem.</p>
+                    <p><em>AUM distribution.</em> The distribution is heavily right-skewed. Most firms are sub-$500M. A handful of firms are over $50B. Median is well below mean. If your distribution looks normal, something's wrong with your filter or your data.</p>
+                    <p><em>Geographic distribution.</em> California, New York, Texas, Florida, and Illinois dominate. If your list over-indexes another state by an unexpected margin, check for filter errors.</p>
+                    <p><em>Channel mix.</em> Pure RIAs are roughly 30% of advisors but a much higher share of total AUM. Hybrid firms are growing. If your channel mix doesn't reflect your filter intent, recheck.</p>
+                    <p>These sanity checks catch most pipeline bugs before they hit a campaign. They take 10 minutes to run and save weeks of recovery from a bad campaign.</p>
+
+                </article>
+            </div>
+        </section>
+
+        <section class="section faq-section">
+            <div class="container">
+                <h2 class="section__title">Frequently Asked Questions</h2>
+
+                <details class="faq-item">
+                    <summary class="faq-item__question">How long does it take to build an RIA list from scratch?</summary>
+                    <div class="faq-item__answer"><p>A first version takes 4 to 8 engineering weeks if you're starting from raw IAPD and FINRA data. Ongoing maintenance is another 0.25 to 0.5 FTE depending on freshness requirements.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Is IAPD data free?</summary>
+                    <div class="faq-item__answer"><p>Yes. The SEC publishes Form ADV bulk data as a free download. FINRA BrokerCheck data is also public but has more access friction and no clean bulk export.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">What's the most common mistake in building an RIA list?</summary>
+                    <div class="faq-item__answer"><p>Treating the ADV-listed compliance email as the right outreach target. It's not. You need person-level enrichment for principals, COOs, CIOs, or CCOs depending on your product.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">How often should I refresh an RIA list?</summary>
+                    <div class="faq-item__answer"><p>Firm and AUM data: quarterly. Contact deliverability: monthly. Per-campaign validation: every time. Annual rebuilds align with Form ADV annual amendment season (spring).</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Can I build a state-registered RIA list the same way?</summary>
+                    <div class="faq-item__answer"><p>Partially. State-registered firms file with their state regulator, not always with the SEC. Each state's data quality and access varies. NASAA aggregates some data, but state-by-state pulls are often required.</p></div>
+                </details>
+            </div>
+        </section>
+
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-section__header">
+                    <h2 class="cta-section__title">Need verified advisor data?</h2>
+                    <p class="cta-section__text">Tell us your criteria. We build the list.</p>
+                </div>
+                <a href="/contact/" class="btn btn--white btn--lg">Get 20 Free Records</a>
+                <p class="cta-section__proof">FINRA verified &middot; 3-5 day delivery &middot; No annual contracts</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="/" class="footer__logo">
+                        <img src="/assets/icons/icon-no-bg-white.svg" alt="" class="footer__logo-icon" width="28" height="34" loading="lazy">
+                        <span class="footer__logo-text">Fiducia</span>
+                    </a>
+                    <p class="footer__tagline">Financial Advisor Intelligence</p>
+                </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Advisor Types</h4>
+                <ul class="footer__links">
+                    <li><a href="/advisors/ria/">Registered Investment Advisors</a></li>
+<li><a href="/advisors/broker-dealer/">Broker-Dealer Reps</a></li>
+<li><a href="/advisors/cfp/">Certified Financial Planners</a></li>
+<li><a href="/advisors/wealth-management/">Wealth Managers</a></li>
+<li><a href="/advisors/insurance/">Insurance-Licensed Advisors</a></li>
+<li><a href="/advisors/retirement/">Retirement Plan Advisors</a></li>
+<li><a href="/advisors/estate-planning/">Estate Planning Advisors</a></li>
+<li><a href="/advisors/hybrid/">Hybrid/Dual-Registered</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Services</h4>
+                <ul class="footer__links">
+                    <li><a href="/services/advisor-contact-data/">Advisor Contact Data</a></li>
+<li><a href="/services/firm-intelligence/">Firm Intelligence</a></li>
+<li><a href="/services/custom-list-building/">Custom List Building</a></li>
+<li><a href="/services/aum-segmentation/">AUM Segmentation</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">For Your Team</h4>
+                <ul class="footer__links">
+                    <li><a href="/for/custodians/">Custodians</a></li>
+<li><a href="/for/compliance-tech/">Compliance Technology</a></li>
+<li><a href="/for/fintech/">Fintech Platforms</a></li>
+<li><a href="/for/insurance-distributors/">Insurance Distributors</a></li>
+<li><a href="/for/asset-managers/">Asset Managers</a></li>
+<li><a href="/for/financial-recruiting/">Financial Recruiting</a></li>
+<li><a href="/for/wealthtech/">Wealth Tech Vendors</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Compare</h4>
+                <ul class="footer__links">
+                    <li><a href="/compare/vs-zoominfo/">Fiducia vs ZoomInfo</a></li>
+<li><a href="/compare/vs-apollo/">Fiducia vs Apollo</a></li>
+<li><a href="/compare/vs-generic-b2b/">vs Generic B2B Data</a></li>
+<li><a href="/compare/vs-discovery-data/">vs Discovery Data</a></li>
+<li><a href="/alternatives/zoominfo-alternative/">ZoomInfo Alternative</a></li>
+<li><a href="/alternatives/apollo-alternative/">Apollo Alternative</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Company</h4>
+                <ul class="footer__links">
+                    <li><a href="/about/">About Fiducia</a></li>
+<li><a href="/pricing/">Pricing</a></li>
+<li><a href="/contact/">Contact</a></li>
+<li><a href="https://getprovyx.com" target="_blank" rel="noopener noreferrer">Provyx</a></li>
+<li><a href="https://veruminc.com" target="_blank" rel="noopener noreferrer">Verum</a></li>
+<li><a href="https://getvettica.com" target="_blank" rel="noopener noreferrer">Vettica</a></li>
+<li><a href="/privacy/">Privacy Policy</a></li>
+<li><a href="/terms/">Terms of Service</a></li>
+                </ul>
+            </div>
+            </div>
+            <div class="footer__bottom">
+                <span>&copy; 2026 Fiducia. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="consent-banner" class="consent-banner" style="display:none">
+        <p>We use cookies to analyze site traffic and improve your experience. <a href="/privacy/">Privacy Policy</a></p>
+        <div class="consent-banner__actions">
+            <button class="consent-banner__btn consent-banner__btn--accept" onclick="fiduciaConsent('granted')">Accept</button>
+            <button class="consent-banner__btn consent-banner__btn--deny" onclick="fiduciaConsent('denied')">Deny</button>
+        </div>
+    </div>
+    <script>
+    function fiduciaConsent(v){
+      localStorage.setItem('fiducia-consent',v);
+      document.getElementById('consent-banner').style.display='none';
+    }
+    if(!localStorage.getItem('fiducia-consent')){
+      document.getElementById('consent-banner').style.display='';
+    }
+    </script>
+    <script src="/js/main.js" defer></script>
+</body>
+</html>

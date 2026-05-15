@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1B2A4A">
+    <title>RIA vs Broker-Dealer vs Hybrid: Channels Explained</title>
+    <meta name="description" content="Three regulatory channels, three buyer personas. SEC vs FINRA vs both. Why the channel affects what software financial advisors buy.">
+    <link rel="canonical" href="https://getFiducia.com/resources/ria-vs-broker-dealer-vs-hybrid/">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://getFiducia.com/resources/ria-vs-broker-dealer-vs-hybrid/">
+    <meta property="og:title" content="RIA vs Broker-Dealer vs Hybrid: Channels Explained">
+    <meta property="og:description" content="Three regulatory channels, three buyer personas. SEC vs FINRA vs both. Why the channel affects what software financial advisors buy.">
+    <meta property="og:site_name" content="Fiducia">
+    <meta property="og:image" content="https://getFiducia.com/assets/images/og-fiducia.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RIA vs Broker-Dealer vs Hybrid: Channels Explained">
+    <meta name="twitter:description" content="Three regulatory channels, three buyer personas. SEC vs FINRA vs both. Why the channel affects what software financial advisors buy.">
+    <meta name="twitter:image" content="https://getFiducia.com/assets/images/og-fiducia.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://getFiducia.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Resources",
+      "item": "https://getFiducia.com/resources/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "RIA vs Broker-Dealer vs Hybrid: Three Channels, Three Buyers",
+      "item": "https://getFiducia.com/resources/ria-vs-broker-dealer-vs-hybrid/"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "RIA vs Broker-Dealer vs Hybrid: Three Channels, Three Buyers",
+  "description": "Three regulatory channels, three buyer personas. SEC vs FINRA vs both. Why the channel affects what software financial advisors buy.",
+  "author": {
+    "@type": "Organization",
+    "name": "Fiducia"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fiducia",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://getFiducia.com/assets/favicons/apple-touch-icon.png"
+    }
+  },
+  "datePublished": "2026-05-14",
+  "dateModified": "2026-05-14",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://getFiducia.com/resources/ria-vs-broker-dealer-vs-hybrid/"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many financial advisors are RIAs vs broker-dealer reps?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Of roughly 320,000 US advisors, about half are pure BD reps, around 100,000 are dual-registered hybrids, and the remainder are pure RIAs. Pure RIAs are the smallest cohort but the fastest growing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why can't I sell software directly to broker-dealer reps?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because the BD home office controls the approved technology stack. Individual reps don't have purchasing authority for most enterprise software. The exception is independent BD reps at firms like LPL or Cetera, who have more discretion."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are hybrid advisors regulated by SEC or FINRA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both. Their RIA activity is regulated by the SEC (or state) under the Investment Advisers Act. Their brokerage activity is regulated by FINRA. The same advisor follows both rulebooks depending on which hat they're wearing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a single firm be both an RIA and a broker-dealer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The firm can be both, but typically through affiliated entities under common ownership. A firm files separate Form ADV (RIA) and Form BD (broker-dealer) filings. Advisors are licensed individually under each entity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the channel matter more than the firm size?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because channel determines who has buying authority and what regulatory framework applies. A $500M pure RIA buys differently than a $500M BD-owned wealth practice, even though the asset base is identical."
+      }
+    }
+  ]
+}
+    </script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg">
+    <link rel="icon" type="image/svg+xml" sizes="16x16" href="/assets/favicons/favicon-16.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+
+    <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/css/styles.css?v=1" as="style">
+    <link rel="stylesheet" href="/assets/fonts/plus-jakarta-sans.min.css">
+    <link rel="stylesheet" href="/css/styles.css?v=1">
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      var _fc = localStorage.getItem('fiducia-consent');
+      if (_fc === 'granted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T86RC0L61S"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-T86RC0L61S');
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="sr-only sr-only--focusable">Skip to main content</a>
+    <header class="header" role="banner">
+        <div class="container header__inner">
+            <a href="/" class="header__logo">
+                <img src="/assets/favicons/favicon.svg" alt="" class="header__logo-icon" width="32" height="32" fetchpriority="high">
+                <span class="header__logo-text">Fiducia</span>
+            </a>
+
+            <nav class="nav--desktop" role="navigation" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Data <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/advisors/" class="nav__dropdown-item">All Advisor Data</a>
+<a href="/advisors/ria/" class="nav__dropdown-item">Registered Investment Advisors</a>
+<a href="/advisors/broker-dealer/" class="nav__dropdown-item">Broker-Dealer Reps</a>
+<a href="/advisors/cfp/" class="nav__dropdown-item">Certified Financial Planners</a>
+<a href="/advisors/wealth-management/" class="nav__dropdown-item">Wealth Managers</a>
+<a href="/advisors/retirement/" class="nav__dropdown-item">Retirement Plan Advisors</a>
+                    </div>
+                </li><li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Services <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/services/advisor-contact-data/" class="nav__dropdown-item">Advisor Contact Data</a>
+<a href="/services/firm-intelligence/" class="nav__dropdown-item">Firm Intelligence</a>
+<a href="/services/custom-list-building/" class="nav__dropdown-item">Custom List Building</a>
+<a href="/services/aum-segmentation/" class="nav__dropdown-item">AUM Segmentation</a>
+                    </div>
+                </li><li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Resources <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/resources/" class="nav__dropdown-item">Guides & Articles</a>
+<a href="/compare/" class="nav__dropdown-item">Comparisons</a>
+<a href="/alternatives/" class="nav__dropdown-item">Alternatives</a>
+<a href="/for/" class="nav__dropdown-item">By Industry</a>
+<a href="/glossary/" class="nav__dropdown-item">Glossary</a>
+                    </div>
+                </li><li><a href="/pricing/" class="nav__link">Pricing</a></li><li><a href="/about/" class="nav__link">About</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__cta">
+                <a href="/contact/" class="btn btn--primary btn--sm">Get 20 Free Records</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span class="menu-toggle__icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav--mobile" role="navigation" aria-label="Mobile navigation">
+        <ul class="nav__list">
+            <li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Data <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/advisors/" class="nav__dropdown-item">All Advisor Data</a>
+<a href="/advisors/ria/" class="nav__dropdown-item">Registered Investment Advisors</a>
+<a href="/advisors/broker-dealer/" class="nav__dropdown-item">Broker-Dealer Reps</a>
+<a href="/advisors/cfp/" class="nav__dropdown-item">Certified Financial Planners</a>
+<a href="/advisors/wealth-management/" class="nav__dropdown-item">Wealth Managers</a>
+<a href="/advisors/retirement/" class="nav__dropdown-item">Retirement Plan Advisors</a>
+                    </div>
+                </li><li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Services <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/services/advisor-contact-data/" class="nav__dropdown-item">Advisor Contact Data</a>
+<a href="/services/firm-intelligence/" class="nav__dropdown-item">Firm Intelligence</a>
+<a href="/services/custom-list-building/" class="nav__dropdown-item">Custom List Building</a>
+<a href="/services/aum-segmentation/" class="nav__dropdown-item">AUM Segmentation</a>
+                    </div>
+                </li><li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Resources <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/resources/" class="nav__dropdown-item">Guides & Articles</a>
+<a href="/compare/" class="nav__dropdown-item">Comparisons</a>
+<a href="/alternatives/" class="nav__dropdown-item">Alternatives</a>
+<a href="/for/" class="nav__dropdown-item">By Industry</a>
+<a href="/glossary/" class="nav__dropdown-item">Glossary</a>
+                    </div>
+                </li><li><a href="/pricing/" class="nav__link">Pricing</a></li><li><a href="/about/" class="nav__link">About</a></li>
+        </ul>
+        <a href="/contact/" class="btn btn--primary">Get 20 Free Records</a>
+    </nav>
+
+    <script>
+    (function(){
+        var toggle=document.querySelector('.menu-toggle');
+        var mobileNav=document.querySelector('.nav--mobile');
+        if(!toggle||!mobileNav)return;
+        toggle.addEventListener('click',function(){
+            var open=mobileNav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            toggle.setAttribute('aria-expanded',open);
+            document.body.style.overflow=open?'hidden':'';
+        });
+        var dropdowns=document.querySelectorAll('.nav__item--dropdown .nav__dropdown-toggle');
+        dropdowns.forEach(function(btn){
+            btn.addEventListener('click',function(e){
+                e.preventDefault();
+                var parent=btn.closest('.nav__item--dropdown');
+                var wasActive=parent.classList.contains('active');
+                if(mobileNav.contains(parent)){
+                    mobileNav.querySelectorAll('.nav__item--dropdown.active').forEach(function(d){d.classList.remove('active');d.querySelector('.nav__dropdown-toggle').setAttribute('aria-expanded','false');});
+                }
+                if(!wasActive){
+                    parent.classList.add('active');
+                    btn.setAttribute('aria-expanded','true');
+                }else{
+                    parent.classList.remove('active');
+                    btn.setAttribute('aria-expanded','false');
+                }
+            });
+        });
+    })();
+    </script>
+
+    <main id="main-content">
+
+        <section class="page-hero">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="https://getFiducia.com">Home</a> <span class="breadcrumb__separator">/</span> <a href="https://getFiducia.com/resources/">Resources</a> <span class="breadcrumb__separator">/</span> <span class="breadcrumb__current">RIA vs Broker-Dealer vs Hybrid: Three Channels, Three Buyers</span>
+        </nav>
+                <h1 class="page-hero__title">RIA vs Broker-Dealer vs Hybrid: Three Channels, Three Buyers</h1>
+                <p class="page-hero__subtitle">Three regulatory channels, three buyer personas. SEC versus FINRA versus both. Why the registration channel determines what an advisor buys.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <article class="content__body">
+
+                    <p>If you sell software to financial advisors, the single most important fact about your prospect is their registration channel. RIA, broker-dealer rep, and hybrid registrants live under different regulators, follow different rules, sit under different supervisors, and buy different software. Selling the same pitch to all three is the fastest way to waste your year.</p>
+
+                    <p>Here's the breakdown.</p>
+
+                    <h2>The Three Channels</h2>
+                    <p>There are three registration channels in US retail advice.</p>
+                    <ol>
+                        <li>Investment Adviser Representative (IAR) at a Registered Investment Adviser (RIA). Regulated by the SEC (over $100M AUM) or by state (under $100M).</li>
+                        <li>Registered Representative (RR) at a Broker-Dealer (BD). Regulated by FINRA.</li>
+                        <li>Hybrid (dual-registered). The advisor is both an IAR with an RIA and an RR with a BD. Regulated by both SEC/state and FINRA.</li>
+                    </ol>
+
+                    <p>About 320,000 advisors operate in the US. Roughly half are pure broker-dealer reps. A growing minority (around 100,000) are dual-registered hybrids. Pure RIAs are the smallest of the three by headcount but the fastest-growing. The flow of advisors from BD-only to hybrid to fee-only RIA has been one of the dominant industry trends for fifteen years.</p>
+
+                    <h2>What Each Channel Does Differently</h2>
+
+                    <h3>Pure RIAs</h3>
+                    <p>RIAs charge fees (usually a percentage of AUM, sometimes flat or hourly). They have a fiduciary duty to clients under the Investment Advisers Act. Compensation is fee-based, no commissions. Custody is typically with Schwab, Fidelity, Pershing, or a smaller custodian. The firm has its own compliance officer (CCO) and its own infrastructure.</p>
+
+                    <p>The buying unit is usually the principal or the COO. Decisions are local to the firm. There's no broker-dealer compliance office overruling tech choices. RIAs buy the software they want.</p>
+
+                    <h3>Broker-Dealer Reps</h3>
+                    <p>BD reps are employees or independent contractors of a broker-dealer. They sell commissioned products (mutual funds, annuities, structured products, sometimes individual securities). They follow FINRA rules including extensive supervisory and recordkeeping requirements. They use the broker-dealer's technology stack: the BD's CRM, the BD's compliance system, the BD's approved tools list.</p>
+
+                    <p>The buying unit for technology is the broker-dealer corporate office, not the individual rep. If you're selling to BD reps directly you're often pitching someone who can't buy. The exception is independent BD reps (think LPL, Cetera, Cambridge), who have more discretion over their own stack within the BD's approved-vendor list.</p>
+
+                    <h3>Hybrids</h3>
+                    <p>Dual-registered advisors run a fee-based RIA practice and a commission-based brokerage practice in parallel. They use two regulatory frameworks at once. The same advisor can sell a client a mutual fund through the BD and manage their portfolio through the RIA. This is the dominant model in independent advice today.</p>
+
+                    <p>For hybrids, technology decisions are split. RIA-side tools (planning, billing, performance reporting) are usually chosen by the firm. BD-side tools are mostly chosen by the broker-dealer. The hybrid firm might use Wealthbox for RIA CRM but be required to use the BD's compliance system for brokerage activity.</p>
+
+                    <h2>Why the Channel Determines What They Buy</h2>
+                    <p>Channel-driven buying differences:</p>
+                    <ul>
+                        <li>RIA-only firms buy comprehensive platforms because they own the whole stack. They evaluate based on integration and total cost of ownership.</li>
+                        <li>Pure BD reps don't buy. The BD home office buys. Selling to reps requires partnering with or being approved by the BD.</li>
+                        <li>Hybrids buy RIA-side tools but defer to BD on BD-side tools. They're a great target for planning software, performance reporting, and client portals. They're a bad target for commission-related compliance tools.</li>
+                    </ul>
+
+                    <p>Compliance and surveillance buyers should also pay attention. FINRA-regulated activity triggers different obligations than IA-Act-regulated activity. Trade-surveillance tools that work for BDs may not be SEC-compliant for RIA advisory accounts and vice versa.</p>
+
+                    <h2>How to Identify Each Channel in Your Data</h2>
+                    <p>Form ADV identifies RIAs. Form BD identifies broker-dealers. The CRD system links individuals across both. Specifically:</p>
+                    <ul>
+                        <li>An advisor with an active IAR registration (SEC or state) and no BD registration is a pure RIA.</li>
+                        <li>An advisor with an active BD registration (FINRA) and no IA registration is a pure BD rep.</li>
+                        <li>An advisor with both active registrations is a hybrid.</li>
+                    </ul>
+                    <p>Some BD reps maintain IA registrations through their firm even if they don't run fee-based business. The cleaner test is whether the affiliated RIA reports advisory AUM. We use ADV Item 5.F (regulatory AUM) plus IAR registration status to determine real hybrid activity. <a href="/services/firm-intelligence/">Our firm intelligence service includes this classification</a>.</p>
+
+                    <h2>The Practical Implication</h2>
+                    <p>If you're a wealthtech vendor: your ICP is probably RIAs and hybrids, not pure BD reps. Filter accordingly.</p>
+                    <p>If you're a compliance vendor: your ICP depends on which regulator's rules you address. SEC compliance products go to RIAs. FINRA-compliant products go to BDs. Cross-jurisdictional tools fit hybrids.</p>
+                    <p>If you're an asset manager: BD reps and hybrids matter because they sell product. Pure RIAs matter for institutional-grade product placement (ETFs, SMAs, models). Channel preference shapes whether you build a wholesaler force or a model-marketplace strategy.</p>
+
+                    <p>The first segmentation step on any advisor list should be channel. If your vendor can't tell the difference, your list isn't ready to use.</p>
+
+                    <h2>The Channel Migration That Matters</h2>
+                    <p>One of the most important industry dynamics over the past fifteen years has been the steady migration of advisors from BD-only models to hybrid and then to pure RIA. The driver is economic: fee-based revenue compounds more reliably than commission revenue, and advisors prefer fiduciary positioning with clients.</p>
+
+                    <p>This migration creates a continuous flow of recently-transitioned advisors. A BD rep who moved to a hybrid model two years ago is now buying tools that they couldn't buy as a captive rep. They have fresh purchasing authority, a partial-stack vendor situation, and a desire to look modern relative to their old wirehouse self. They're an outsized opportunity for wealthtech.</p>
+
+                    <p>You can identify channel migrators using CRD history. An IAR who was a pure BD rep for 15 years and added an RIA registration in the past 24 months is in active build mode. We pull this cohort regularly for wealthtech clients.</p>
+
+                    <h2>What Each Channel Buys</h2>
+                    <p>Here's how common product categories map to channels:</p>
+                    <ul>
+                        <li>Financial planning software: RIA-favored, but used in all channels. Hybrids often have firm-wide deployments.</li>
+                        <li>Portfolio management and rebalancing: RIA-favored. BD reps usually use the BD's centralized portfolio management.</li>
+                        <li>CRM: All channels, but the buyer differs. RIA firms pick their own. BD reps use the BD's CRM. Hybrids run dual CRMs sometimes.</li>
+                        <li>Client portal and reporting: RIA-favored. BD reps use the BD's portal.</li>
+                        <li>Compliance and trade surveillance: BD-favored (heavier rule set). RIAs need lighter compliance but with different rule mappings.</li>
+                        <li>Marketing automation and client acquisition: Hybrid-favored. Hybrids are the most marketing-active channel.</li>
+                        <li>Annuity and insurance product sales tools: BD-favored.</li>
+                        <li>Investment research and portfolio construction tools: RIA-favored.</li>
+                    </ul>
+
+                    <h2>Channel and Regulatory Risk</h2>
+                    <p>One detail worth flagging for compliance buyers: regulatory framework determines what evidence the firm must preserve. RIAs follow Advisers Act Rule 204-2 (recordkeeping). BDs follow Exchange Act Rule 17a-3 and 17a-4. Hybrids follow both. If your compliance product captures or stores communications, your encryption, retention, and reproduction requirements differ by channel.</p>
+
+                    <p>This is why "we serve financial advisors" is too vague for compliance positioning. The right pitch names the regulator and the rule.</p>
+
+                    <h2>How We Segment by Channel</h2>
+                    <p>Every list we build is pre-segmented by channel. Our standard fields:</p>
+                    <ul>
+                        <li>Channel (Pure RIA, Pure BD, Hybrid)</li>
+                        <li>Primary registration (SEC, state, FINRA)</li>
+                        <li>Years in current channel (from CRD history)</li>
+                        <li>Recent channel transitions (added or dropped registrations in past 24 months)</li>
+                        <li>BD affiliation if hybrid (which broker-dealer)</li>
+                    </ul>
+                    <p>That five-field segmentation alone produces better outreach targeting than most generic B2B databases offer for any vertical. <a href="/services/firm-intelligence/">If you want a list filtered to your exact channel mix, that's what we do</a>.</p>
+
+                    <h2>Channel and the Captive-vs-Independent Spectrum</h2>
+                    <p>Inside each channel there's a second axis worth knowing: captive versus independent. A captive advisor is an employee of a firm that pays salary plus bonus and owns the book of business. An independent advisor (sometimes called 1099 or IC) runs their own practice under a broker-dealer or RIA umbrella and owns or partially owns their book.</p>
+                    <p>Captive advisors at wirehouses (Morgan Stanley, Merrill, UBS, Wells Fargo) and bank wealth platforms (JP Morgan, Goldman PWM) make up the largest BD-channel cohort. They can't buy software independently. The firm buys for them.</p>
+                    <p>Independent advisors at IBDs (LPL, Cetera, Cambridge, Raymond James independent) and at independent RIAs have full or near-full discretion on their own technology choices, within an approved-vendor list at IBDs and unrestricted at most pure RIAs.</p>
+                    <p>For sales targeting, captive advisors are essentially unreachable except through the home office. Independent advisors at IBDs are reachable but constrained. Pure RIA advisors are fully reachable. The 320,000-advisor universe is roughly 40% captive, 30% IBD independent, and 30% pure RIA. The reachable universe for most wealthtech vendors is the 60% that's not wirehouse captive.</p>
+
+                    <h2>Why Channel Determines Pitch Tone</h2>
+                    <p>One last point worth flagging. Channel doesn't just shape what tools an advisor can buy. It shapes how they think about clients, regulation, and their own career.</p>
+                    <p>RIA principals tend to think of themselves as fiduciaries first and entrepreneurs second. Pitches that lead with fiduciary duty and client outcomes land. Pitches that lead with revenue and AUM growth land second.</p>
+                    <p>BD reps tend to think of themselves as salespeople who are good at clients. Pitches that lead with revenue, production credits, and competitive differentiation land. Pitches that lead with fiduciary duty land second.</p>
+                    <p>Hybrids navigate both identities. Pitches that frame the firm as serving high-quality clients with sophisticated planning while building a sustainable business work best.</p>
+                    <p>The channel you're talking to changes the pitch, not just the product fit. <a href="/services/custom-list-building/">If you want a list with channel pre-segmented, we build them every week</a>.</p>
+
+                </article>
+            </div>
+        </section>
+
+        <section class="section faq-section">
+            <div class="container">
+                <h2 class="section__title">Frequently Asked Questions</h2>
+
+                <details class="faq-item">
+                    <summary class="faq-item__question">How many financial advisors are RIAs vs broker-dealer reps?</summary>
+                    <div class="faq-item__answer"><p>Of roughly 320,000 US advisors, about half are pure BD reps, around 100,000 are dual-registered hybrids, and the remainder are pure RIAs. Pure RIAs are the smallest cohort but the fastest growing.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Why can't I sell software directly to broker-dealer reps?</summary>
+                    <div class="faq-item__answer"><p>Because the BD home office controls the approved technology stack. Individual reps don't have purchasing authority for most enterprise software. The exception is independent BD reps at firms like LPL or Cetera, who have more discretion.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Are hybrid advisors regulated by SEC or FINRA?</summary>
+                    <div class="faq-item__answer"><p>Both. Their RIA activity is regulated by the SEC (or state) under the Investment Advisers Act. Their brokerage activity is regulated by FINRA. The same advisor follows both rulebooks depending on which hat they're wearing.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Can a single firm be both an RIA and a broker-dealer?</summary>
+                    <div class="faq-item__answer"><p>The firm can be both, but typically through affiliated entities under common ownership. A firm files separate Form ADV (RIA) and Form BD (broker-dealer) filings. Advisors are licensed individually under each entity.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Why does the channel matter more than the firm size?</summary>
+                    <div class="faq-item__answer"><p>Because channel determines who has buying authority and what regulatory framework applies. A $500M pure RIA buys differently than a $500M BD-owned wealth practice, even though the asset base is identical.</p></div>
+                </details>
+            </div>
+        </section>
+
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-section__header">
+                    <h2 class="cta-section__title">Need verified advisor data?</h2>
+                    <p class="cta-section__text">Tell us your criteria. We build the list.</p>
+                </div>
+                <a href="/contact/" class="btn btn--white btn--lg">Get 20 Free Records</a>
+                <p class="cta-section__proof">FINRA verified &middot; 3-5 day delivery &middot; No annual contracts</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="/" class="footer__logo">
+                        <img src="/assets/icons/icon-no-bg-white.svg" alt="" class="footer__logo-icon" width="28" height="34" loading="lazy">
+                        <span class="footer__logo-text">Fiducia</span>
+                    </a>
+                    <p class="footer__tagline">Financial Advisor Intelligence</p>
+                </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Advisor Types</h4>
+                <ul class="footer__links">
+                    <li><a href="/advisors/ria/">Registered Investment Advisors</a></li>
+<li><a href="/advisors/broker-dealer/">Broker-Dealer Reps</a></li>
+<li><a href="/advisors/cfp/">Certified Financial Planners</a></li>
+<li><a href="/advisors/wealth-management/">Wealth Managers</a></li>
+<li><a href="/advisors/insurance/">Insurance-Licensed Advisors</a></li>
+<li><a href="/advisors/retirement/">Retirement Plan Advisors</a></li>
+<li><a href="/advisors/estate-planning/">Estate Planning Advisors</a></li>
+<li><a href="/advisors/hybrid/">Hybrid/Dual-Registered</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Services</h4>
+                <ul class="footer__links">
+                    <li><a href="/services/advisor-contact-data/">Advisor Contact Data</a></li>
+<li><a href="/services/firm-intelligence/">Firm Intelligence</a></li>
+<li><a href="/services/custom-list-building/">Custom List Building</a></li>
+<li><a href="/services/aum-segmentation/">AUM Segmentation</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">For Your Team</h4>
+                <ul class="footer__links">
+                    <li><a href="/for/custodians/">Custodians</a></li>
+<li><a href="/for/compliance-tech/">Compliance Technology</a></li>
+<li><a href="/for/fintech/">Fintech Platforms</a></li>
+<li><a href="/for/insurance-distributors/">Insurance Distributors</a></li>
+<li><a href="/for/asset-managers/">Asset Managers</a></li>
+<li><a href="/for/financial-recruiting/">Financial Recruiting</a></li>
+<li><a href="/for/wealthtech/">Wealth Tech Vendors</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Compare</h4>
+                <ul class="footer__links">
+                    <li><a href="/compare/vs-zoominfo/">Fiducia vs ZoomInfo</a></li>
+<li><a href="/compare/vs-apollo/">Fiducia vs Apollo</a></li>
+<li><a href="/compare/vs-generic-b2b/">vs Generic B2B Data</a></li>
+<li><a href="/compare/vs-discovery-data/">vs Discovery Data</a></li>
+<li><a href="/alternatives/zoominfo-alternative/">ZoomInfo Alternative</a></li>
+<li><a href="/alternatives/apollo-alternative/">Apollo Alternative</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Company</h4>
+                <ul class="footer__links">
+                    <li><a href="/about/">About Fiducia</a></li>
+<li><a href="/pricing/">Pricing</a></li>
+<li><a href="/contact/">Contact</a></li>
+<li><a href="https://getprovyx.com" target="_blank" rel="noopener noreferrer">Provyx</a></li>
+<li><a href="https://veruminc.com" target="_blank" rel="noopener noreferrer">Verum</a></li>
+<li><a href="https://getvettica.com" target="_blank" rel="noopener noreferrer">Vettica</a></li>
+<li><a href="/privacy/">Privacy Policy</a></li>
+<li><a href="/terms/">Terms of Service</a></li>
+                </ul>
+            </div>
+            </div>
+            <div class="footer__bottom">
+                <span>&copy; 2026 Fiducia. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="consent-banner" class="consent-banner" style="display:none">
+        <p>We use cookies to analyze site traffic and improve your experience. <a href="/privacy/">Privacy Policy</a></p>
+        <div class="consent-banner__actions">
+            <button class="consent-banner__btn consent-banner__btn--accept" onclick="fiduciaConsent('granted')">Accept</button>
+            <button class="consent-banner__btn consent-banner__btn--deny" onclick="fiduciaConsent('denied')">Deny</button>
+        </div>
+    </div>
+    <script>
+    function fiduciaConsent(v){
+      localStorage.setItem('fiducia-consent',v);
+      document.getElementById('consent-banner').style.display='none';
+    }
+    if(!localStorage.getItem('fiducia-consent')){
+      document.getElementById('consent-banner').style.display='';
+    }
+    </script>
+    <script src="/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1B2A4A">
+    <title>Financial Advisor Data: A Buyer's Guide</title>
+    <meta name="description" content="Compare Discovery Data, Meridian-IQ, BrightScope, Form ADV files, ZoomInfo, Apollo, and niche advisor data vendors. Pick the right source.">
+    <link rel="canonical" href="https://getFiducia.com/resources/financial-advisor-data-buyers-guide/">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://getFiducia.com/resources/financial-advisor-data-buyers-guide/">
+    <meta property="og:title" content="Financial Advisor Data: A Buyer's Guide">
+    <meta property="og:description" content="Compare Discovery Data, Meridian-IQ, BrightScope, Form ADV files, ZoomInfo, Apollo, and niche advisor data vendors. Pick the right source.">
+    <meta property="og:site_name" content="Fiducia">
+    <meta property="og:image" content="https://getFiducia.com/assets/images/og-fiducia.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Financial Advisor Data: A Buyer's Guide">
+    <meta name="twitter:description" content="Compare Discovery Data, Meridian-IQ, BrightScope, Form ADV files, ZoomInfo, Apollo, and niche advisor data vendors. Pick the right source.">
+    <meta name="twitter:image" content="https://getFiducia.com/assets/images/og-fiducia.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://getFiducia.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Resources",
+      "item": "https://getFiducia.com/resources/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Financial Advisor Data: A Buyer's Guide for 2026",
+      "item": "https://getFiducia.com/resources/financial-advisor-data-buyers-guide/"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Financial Advisor Data: A Buyer's Guide for 2026",
+  "description": "Compare Discovery Data, Meridian-IQ, BrightScope, Form ADV files, ZoomInfo, Apollo, and niche advisor data vendors. Pick the right source.",
+  "author": {
+    "@type": "Organization",
+    "name": "Fiducia"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fiducia",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://getFiducia.com/assets/favicons/apple-touch-icon.png"
+    }
+  },
+  "datePublished": "2026-05-14",
+  "dateModified": "2026-05-14",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://getFiducia.com/resources/financial-advisor-data-buyers-guide/"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Discovery Data worth the annual fee?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you pull lists at least quarterly and have at least three users, the per-pull math usually works. For single campaigns or seasonal use, per-record pricing from a niche vendor is cheaper."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I just use the SEC's free Form ADV file?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, the data is public. You'll need engineering to parse the XML, handle state-registered firms, and add a contact enrichment layer. Most teams underestimate the maintenance cost."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is ZoomInfo bad for advisor outreach?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It can't reliably distinguish RIAs from broker-dealers or bank trust departments, and its contact data skews toward operations roles rather than investment principals. Industry classification matters more than contact volume."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need BrightScope?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if your buyer is the retirement plan advisor or plan sponsor. For RIA wealth management contacts, BrightScope is overkill and most of its value is in the plan-level data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What about LinkedIn Sales Navigator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Useful for verification and account research, weak as a primary list source. LinkedIn's firm-type filtering doesn't map to regulatory channel, so you'll get mixed RIAs, IARs, and bank reps in the same search."
+      }
+    }
+  ]
+}
+    </script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg">
+    <link rel="icon" type="image/svg+xml" sizes="16x16" href="/assets/favicons/favicon-16.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+
+    <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/css/styles.css?v=1" as="style">
+    <link rel="stylesheet" href="/assets/fonts/plus-jakarta-sans.min.css">
+    <link rel="stylesheet" href="/css/styles.css?v=1">
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      var _fc = localStorage.getItem('fiducia-consent');
+      if (_fc === 'granted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T86RC0L61S"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-T86RC0L61S');
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="sr-only sr-only--focusable">Skip to main content</a>
+    <header class="header" role="banner">
+        <div class="container header__inner">
+            <a href="/" class="header__logo">
+                <img src="/assets/favicons/favicon.svg" alt="" class="header__logo-icon" width="32" height="32" fetchpriority="high">
+                <span class="header__logo-text">Fiducia</span>
+            </a>
+
+            <nav class="nav--desktop" role="navigation" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Data <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/advisors/" class="nav__dropdown-item">All Advisor Data</a>
+<a href="/advisors/ria/" class="nav__dropdown-item">Registered Investment Advisors</a>
+<a href="/advisors/broker-dealer/" class="nav__dropdown-item">Broker-Dealer Reps</a>
+<a href="/advisors/cfp/" class="nav__dropdown-item">Certified Financial Planners</a>
+<a href="/advisors/wealth-management/" class="nav__dropdown-item">Wealth Managers</a>
+<a href="/advisors/retirement/" class="nav__dropdown-item">Retirement Plan Advisors</a>
+                    </div>
+                </li><li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Services <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/services/advisor-contact-data/" class="nav__dropdown-item">Advisor Contact Data</a>
+<a href="/services/firm-intelligence/" class="nav__dropdown-item">Firm Intelligence</a>
+<a href="/services/custom-list-building/" class="nav__dropdown-item">Custom List Building</a>
+<a href="/services/aum-segmentation/" class="nav__dropdown-item">AUM Segmentation</a>
+                    </div>
+                </li><li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Resources <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/resources/" class="nav__dropdown-item">Guides & Articles</a>
+<a href="/compare/" class="nav__dropdown-item">Comparisons</a>
+<a href="/alternatives/" class="nav__dropdown-item">Alternatives</a>
+<a href="/for/" class="nav__dropdown-item">By Industry</a>
+<a href="/glossary/" class="nav__dropdown-item">Glossary</a>
+                    </div>
+                </li><li><a href="/pricing/" class="nav__link">Pricing</a></li><li><a href="/about/" class="nav__link">About</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__cta">
+                <a href="/contact/" class="btn btn--primary btn--sm">Get 20 Free Records</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span class="menu-toggle__icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav--mobile" role="navigation" aria-label="Mobile navigation">
+        <ul class="nav__list">
+            <li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Data <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/advisors/" class="nav__dropdown-item">All Advisor Data</a>
+<a href="/advisors/ria/" class="nav__dropdown-item">Registered Investment Advisors</a>
+<a href="/advisors/broker-dealer/" class="nav__dropdown-item">Broker-Dealer Reps</a>
+<a href="/advisors/cfp/" class="nav__dropdown-item">Certified Financial Planners</a>
+<a href="/advisors/wealth-management/" class="nav__dropdown-item">Wealth Managers</a>
+<a href="/advisors/retirement/" class="nav__dropdown-item">Retirement Plan Advisors</a>
+                    </div>
+                </li><li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Services <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/services/advisor-contact-data/" class="nav__dropdown-item">Advisor Contact Data</a>
+<a href="/services/firm-intelligence/" class="nav__dropdown-item">Firm Intelligence</a>
+<a href="/services/custom-list-building/" class="nav__dropdown-item">Custom List Building</a>
+<a href="/services/aum-segmentation/" class="nav__dropdown-item">AUM Segmentation</a>
+                    </div>
+                </li><li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Resources <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/resources/" class="nav__dropdown-item">Guides & Articles</a>
+<a href="/compare/" class="nav__dropdown-item">Comparisons</a>
+<a href="/alternatives/" class="nav__dropdown-item">Alternatives</a>
+<a href="/for/" class="nav__dropdown-item">By Industry</a>
+<a href="/glossary/" class="nav__dropdown-item">Glossary</a>
+                    </div>
+                </li><li><a href="/pricing/" class="nav__link">Pricing</a></li><li><a href="/about/" class="nav__link">About</a></li>
+        </ul>
+        <a href="/contact/" class="btn btn--primary">Get 20 Free Records</a>
+    </nav>
+
+    <script>
+    (function(){
+        var toggle=document.querySelector('.menu-toggle');
+        var mobileNav=document.querySelector('.nav--mobile');
+        if(!toggle||!mobileNav)return;
+        toggle.addEventListener('click',function(){
+            var open=mobileNav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            toggle.setAttribute('aria-expanded',open);
+            document.body.style.overflow=open?'hidden':'';
+        });
+        var dropdowns=document.querySelectorAll('.nav__item--dropdown .nav__dropdown-toggle');
+        dropdowns.forEach(function(btn){
+            btn.addEventListener('click',function(e){
+                e.preventDefault();
+                var parent=btn.closest('.nav__item--dropdown');
+                var wasActive=parent.classList.contains('active');
+                if(mobileNav.contains(parent)){
+                    mobileNav.querySelectorAll('.nav__item--dropdown.active').forEach(function(d){d.classList.remove('active');d.querySelector('.nav__dropdown-toggle').setAttribute('aria-expanded','false');});
+                }
+                if(!wasActive){
+                    parent.classList.add('active');
+                    btn.setAttribute('aria-expanded','true');
+                }else{
+                    parent.classList.remove('active');
+                    btn.setAttribute('aria-expanded','false');
+                }
+            });
+        });
+    })();
+    </script>
+
+    <main id="main-content">
+
+        <section class="page-hero">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="https://getFiducia.com">Home</a> <span class="breadcrumb__separator">/</span> <a href="https://getFiducia.com/resources/">Resources</a> <span class="breadcrumb__separator">/</span> <span class="breadcrumb__current">Financial Advisor Data: A Buyer's Guide for 2026</span>
+        </nav>
+                <h1 class="page-hero__title">Financial Advisor Data: A Buyer's Guide for 2026</h1>
+                <p class="page-hero__subtitle">Discovery Data, Meridian-IQ, BrightScope, ADV public files, ZoomInfo, Apollo, and niche vendors. How wealthtech and fintech buyers should choose.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <article class="content__body">
+
+                    <p>If you sell software to financial advisors, your prospect data is the single biggest determinant of pipeline. Get the wrong list and your reps waste a quarter calling bank branch managers who can't sign anything. Get the right list and you skip 90% of the noise that ZoomInfo would have sold you.</p>
+
+                    <p>We've watched buyers cycle through every major advisor data vendor over the past five years. Here's a candid look at what each one is for, where they break, and how to pick.</p>
+
+                    <h2>The Six Categories of Advisor Data</h2>
+                    <p>Advisor data falls into six categories, and most buyers don't realize they're mixing them up. Understanding the category determines who you should buy from.</p>
+                    <ol>
+                        <li>Regulatory primary sources (Form ADV filings, FINRA BrokerCheck, IAPD). Free, public, raw.</li>
+                        <li>Aggregated regulatory databases (Discovery Data, Meridian-IQ, SS&amp;C Salentica). Paid, cleaned, structured.</li>
+                        <li>Retirement plan and Form 5500 data (BrightScope, Larkspur, Judy Diamond). Specialty.</li>
+                        <li>Generic B2B contact data (ZoomInfo, Apollo, Lusha, Cognism). Not advisor-specific.</li>
+                        <li>Niche advisor vendors (Fiducia, AdvizorPro, FA Match, T3 Tech Stack data). Built for one use case.</li>
+                        <li>Custodian and broker-dealer rep rosters (Schwab, Fidelity, LPL channel data). Distribution partners only.</li>
+                    </ol>
+
+                    <h2>Discovery Data and Meridian-IQ</h2>
+                    <p>Discovery Data is the incumbent. It bundles RIA, broker-dealer, mutual fund, and retirement plan databases into an annual subscription that typically runs $25K to $75K depending on how many seats and modules you pick. The data is real and the structure is good. The catch is that they sell access, not the underlying file. If you stop subscribing, you lose the data. You can't export everything.</p>
+
+                    <p>Meridian-IQ (now part of SS&amp;C) sits in the same tier with similar pricing. Their RIA and BD coverage is comparable. Where they differentiate is sometimes deeper coverage of institutional money managers and retirement plan sponsors, which matters if you sell to DCIO teams or asset managers.</p>
+
+                    <p>Both vendors are appropriate when you have committed sales budget, multiple users, and a yearlong campaign. They're overkill if you're running a single 5,000-contact campaign once a quarter.</p>
+
+                    <h2>BrightScope and Form 5500 Data</h2>
+                    <p>BrightScope (acquired by ISS) is the go-to for retirement plan data. If you sell to plan advisors or DC plan sponsors, BrightScope has cleaner 5500-derived plan-level data than anyone else. Their advisor data is decent but not their core product. Pricing is custom, often six figures for full database access. Larkspur Executive offers a cheaper alternative on the same underlying data with more advisor-side fields.</p>
+
+                    <h2>Form ADV Public Files (The Free Option)</h2>
+                    <p>The SEC publishes every Form ADV filing as a downloadable XML. The IAPD site lets you search and pull individual records. FINRA BrokerCheck is the same for broker-dealer reps. It's all free and authoritative. The downside is that the raw files have no contact data. You get the firm address from the ADV, the principal officers, the AUM, the regulatory history. You don't get a verified email or a direct dial for the CIO.</p>
+
+                    <p>If you have engineering capacity and a single use case, building from ADV directly is the most defensible source. Most teams underestimate the work. The XML is large, schemas change, state-registered firms file with their state and not the SEC, and you still need a contact-enrichment layer on top. <a href="/resources/how-to-build-an-ria-list/">We wrote a separate playbook on the IAPD-to-list pipeline</a>.</p>
+
+                    <h2>ZoomInfo and Apollo</h2>
+                    <p>Generic B2B platforms are tempting because the per-record cost looks cheap. They break in two ways for advisor outreach. First, the firm classification is bad. ZoomInfo can't reliably tell an RIA from a bank trust department or a fee-only planner from a broker-dealer rep, because their NAICS-based segmentation doesn't map to regulatory categories. Second, the contact-level data skews toward operations and IT contacts, not principals and CIOs. You get the office manager's email instead of the principal's. <a href="/compare/vs-zoominfo/">We've benchmarked this directly against our data</a>.</p>
+
+                    <p>Apollo is better on price and on contact freshness, but worse on financial-advisor classification. For a generic SaaS pitch to ops teams it's fine. For a wealthtech pitch to investment committees it's not.</p>
+
+                    <h2>Niche Advisor Vendors</h2>
+                    <p>This is where Fiducia sits. We build custom advisor lists from the regulatory primary sources plus our own contact enrichment, and we price per record instead of per seat. AdvizorPro is a similar model with stronger fintech-focus and weaker BD coverage. FA Match is more recruiting-oriented. The T3 vendor survey data is helpful if you want to know what CRM and planning software a firm uses, but the data is survey-based and not exhaustive.</p>
+
+                    <p>Niche vendors are the right pick when you need a specific slice (firms over $500M AUM, hybrid registrants, fee-only CFPs in five states) and you want to validate ROI before annual commitment.</p>
+
+                    <h2>How to Pick</h2>
+                    <p>Three questions answer the choice 80% of the time.</p>
+                    <p><em>How often do you need fresh data?</em> Annual subscriptions only pay off if you pull lists at least quarterly. One-time campaigns favor per-record vendors.</p>
+                    <p><em>Do you have engineering to build your own?</em> If yes, start from ADV and IAPD. If no, the vendors above exist for a reason.</p>
+                    <p><em>How specific is your ICP?</em> Generic platforms break on specificity. If your ICP is "RIAs over $250M AUM using Wealthbox CRM with at least one CFP on staff," generic B2B data can't filter to that, and the regulatory primary sources don't have CRM data. You need a vendor with both.</p>
+
+                    <p>Most wealthtech teams we work with end up with a stack: a regulatory primary source for the universe, a niche vendor like us for the targeted contact list, and a CRM enrichment tool for ongoing maintenance. <a href="/services/custom-list-building/">If that sounds like your setup, we can build the targeted slice</a>.</p>
+
+                    <h2>Cost Comparison Worth Doing</h2>
+                    <p>A realistic three-year total cost comparison surprises most buyers. Take a wealthtech vendor with 5 AEs running quarterly outbound campaigns of 5,000 contacts each. That's 20,000 contacts a year.</p>
+                    <p>Discovery Data full bundle: roughly $90K per year, with annual increases. Three-year total around $300K.</p>
+                    <p>Per-record niche vendor (us or AdvizorPro): about $1.50 to $3 per record depending on enrichment level. 20,000 contacts a year at the midpoint is $40K per year. Three-year total around $120K.</p>
+                    <p>Build your own from ADV plus enrichment APIs: roughly $50K to $80K of upfront engineering plus $30K to $50K per year of ongoing data ops. Three-year total around $200K, with the data sitting in your environment.</p>
+                    <p>The build option has the lowest marginal cost per record but the highest cliff. The per-record option has the lowest commitment but the highest unit cost. The full subscription is the most expensive nominally but is often the right call if you have 10+ users hitting the data daily.</p>
+
+                    <h2>What Most Teams Get Wrong</h2>
+                    <p>Three patterns we've watched repeat.</p>
+                    <p>The first mistake is over-buying on contact volume. A team signs a full Discovery bundle for the option value of broad data and ends up using a single segment 90% of the time. The narrower segment was buyable for 20% of the cost.</p>
+                    <p>The second mistake is under-buying on contact quality. A team picks the cheapest per-record vendor without testing deliverability, sends a 5,000-contact campaign with a 22% bounce rate, and damages their sending domain reputation for the rest of the quarter. The savings disappear in the recovery.</p>
+                    <p>The third mistake is treating advisor data as a one-time purchase. Advisor data decays at roughly 1.5% per month from job changes, firm transitions, and registration lapses. A list bought in January and emailed in October will underperform a fresh list by 15% or more. Build refresh into the budget.</p>
+
+                    <h2>Our Honest Position</h2>
+                    <p>We sell per-record advisor data. We're biased. Here's the honest read on when we're not the right answer.</p>
+                    <p>If your team has 15+ users hitting advisor data daily across multiple campaigns, an annual subscription is probably better economics. If you need CRM-native enrichment that auto-refreshes inside Salesforce, Discovery Data or a similar platform is a better fit. If you have engineering capacity and a single ICP, build it. If you're testing a new advisor-facing pitch and need a clean list to validate the motion, per-record vendors (us included) win.</p>
+
+                    <p>We'd rather you buy the right thing once than buy the wrong thing twice. <a href="/contact/">If you want a candid recommendation on which path fits your team, we'll give it to you</a>.</p>
+
+                    <p>One more consideration most buyers overlook: integration timeline. Even if Discovery is the right tool long-term, the implementation, CRM mapping, and team training take 6 to 10 weeks before your reps see value. Per-record vendors deliver a campaign-ready file in days. If your goal is pipeline this quarter, the timing argument alone can flip the decision toward a per-record start.</p>
+
+                </article>
+            </div>
+        </section>
+
+        <section class="section faq-section">
+            <div class="container">
+                <h2 class="section__title">Frequently Asked Questions</h2>
+
+                <details class="faq-item">
+                    <summary class="faq-item__question">Is Discovery Data worth the annual fee?</summary>
+                    <div class="faq-item__answer"><p>If you pull lists at least quarterly and have at least three users, the per-pull math usually works. For single campaigns or seasonal use, per-record pricing from a niche vendor is cheaper.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Can I just use the SEC's free Form ADV file?</summary>
+                    <div class="faq-item__answer"><p>Yes, the data is public. You'll need engineering to parse the XML, handle state-registered firms, and add a contact enrichment layer. Most teams underestimate the maintenance cost.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Why is ZoomInfo bad for advisor outreach?</summary>
+                    <div class="faq-item__answer"><p>It can't reliably distinguish RIAs from broker-dealers or bank trust departments, and its contact data skews toward operations roles rather than investment principals. Industry classification matters more than contact volume.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Do I need BrightScope?</summary>
+                    <div class="faq-item__answer"><p>Only if your buyer is the retirement plan advisor or plan sponsor. For RIA wealth management contacts, BrightScope is overkill and most of its value is in the plan-level data.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">What about LinkedIn Sales Navigator?</summary>
+                    <div class="faq-item__answer"><p>Useful for verification and account research, weak as a primary list source. LinkedIn's firm-type filtering doesn't map to regulatory channel, so you'll get mixed RIAs, IARs, and bank reps in the same search.</p></div>
+                </details>
+            </div>
+        </section>
+
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-section__header">
+                    <h2 class="cta-section__title">Need verified advisor data?</h2>
+                    <p class="cta-section__text">Tell us your criteria. We build the list.</p>
+                </div>
+                <a href="/contact/" class="btn btn--white btn--lg">Get 20 Free Records</a>
+                <p class="cta-section__proof">FINRA verified &middot; 3-5 day delivery &middot; No annual contracts</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="/" class="footer__logo">
+                        <img src="/assets/icons/icon-no-bg-white.svg" alt="" class="footer__logo-icon" width="28" height="34" loading="lazy">
+                        <span class="footer__logo-text">Fiducia</span>
+                    </a>
+                    <p class="footer__tagline">Financial Advisor Intelligence</p>
+                </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Advisor Types</h4>
+                <ul class="footer__links">
+                    <li><a href="/advisors/ria/">Registered Investment Advisors</a></li>
+<li><a href="/advisors/broker-dealer/">Broker-Dealer Reps</a></li>
+<li><a href="/advisors/cfp/">Certified Financial Planners</a></li>
+<li><a href="/advisors/wealth-management/">Wealth Managers</a></li>
+<li><a href="/advisors/insurance/">Insurance-Licensed Advisors</a></li>
+<li><a href="/advisors/retirement/">Retirement Plan Advisors</a></li>
+<li><a href="/advisors/estate-planning/">Estate Planning Advisors</a></li>
+<li><a href="/advisors/hybrid/">Hybrid/Dual-Registered</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Services</h4>
+                <ul class="footer__links">
+                    <li><a href="/services/advisor-contact-data/">Advisor Contact Data</a></li>
+<li><a href="/services/firm-intelligence/">Firm Intelligence</a></li>
+<li><a href="/services/custom-list-building/">Custom List Building</a></li>
+<li><a href="/services/aum-segmentation/">AUM Segmentation</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">For Your Team</h4>
+                <ul class="footer__links">
+                    <li><a href="/for/custodians/">Custodians</a></li>
+<li><a href="/for/compliance-tech/">Compliance Technology</a></li>
+<li><a href="/for/fintech/">Fintech Platforms</a></li>
+<li><a href="/for/insurance-distributors/">Insurance Distributors</a></li>
+<li><a href="/for/asset-managers/">Asset Managers</a></li>
+<li><a href="/for/financial-recruiting/">Financial Recruiting</a></li>
+<li><a href="/for/wealthtech/">Wealth Tech Vendors</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Compare</h4>
+                <ul class="footer__links">
+                    <li><a href="/compare/vs-zoominfo/">Fiducia vs ZoomInfo</a></li>
+<li><a href="/compare/vs-apollo/">Fiducia vs Apollo</a></li>
+<li><a href="/compare/vs-generic-b2b/">vs Generic B2B Data</a></li>
+<li><a href="/compare/vs-discovery-data/">vs Discovery Data</a></li>
+<li><a href="/alternatives/zoominfo-alternative/">ZoomInfo Alternative</a></li>
+<li><a href="/alternatives/apollo-alternative/">Apollo Alternative</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Company</h4>
+                <ul class="footer__links">
+                    <li><a href="/about/">About Fiducia</a></li>
+<li><a href="/pricing/">Pricing</a></li>
+<li><a href="/contact/">Contact</a></li>
+<li><a href="https://getprovyx.com" target="_blank" rel="noopener noreferrer">Provyx</a></li>
+<li><a href="https://veruminc.com" target="_blank" rel="noopener noreferrer">Verum</a></li>
+<li><a href="https://getvettica.com" target="_blank" rel="noopener noreferrer">Vettica</a></li>
+<li><a href="/privacy/">Privacy Policy</a></li>
+<li><a href="/terms/">Terms of Service</a></li>
+                </ul>
+            </div>
+            </div>
+            <div class="footer__bottom">
+                <span>&copy; 2026 Fiducia. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="consent-banner" class="consent-banner" style="display:none">
+        <p>We use cookies to analyze site traffic and improve your experience. <a href="/privacy/">Privacy Policy</a></p>
+        <div class="consent-banner__actions">
+            <button class="consent-banner__btn consent-banner__btn--accept" onclick="fiduciaConsent('granted')">Accept</button>
+            <button class="consent-banner__btn consent-banner__btn--deny" onclick="fiduciaConsent('denied')">Deny</button>
+        </div>
+    </div>
+    <script>
+    function fiduciaConsent(v){
+      localStorage.setItem('fiducia-consent',v);
+      document.getElementById('consent-banner').style.display='none';
+    }
+    if(!localStorage.getItem('fiducia-consent')){
+      document.getElementById('consent-banner').style.display='';
+    }
+    </script>
+    <script src="/js/main.js" defer></script>
+</body>
+</html>

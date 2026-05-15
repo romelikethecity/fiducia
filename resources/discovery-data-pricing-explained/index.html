@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1B2A4A">
+    <title>Discovery Data Pricing Explained (and Alternatives)</title>
+    <meta name="description" content="Discovery Data tiering, what's bundled in their RIA, BD, and mutual fund databases, where it falls short, and cheaper alternatives.">
+    <link rel="canonical" href="https://getFiducia.com/resources/discovery-data-pricing-explained/">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://getFiducia.com/resources/discovery-data-pricing-explained/">
+    <meta property="og:title" content="Discovery Data Pricing Explained (and Alternatives)">
+    <meta property="og:description" content="Discovery Data tiering, what's bundled in their RIA, BD, and mutual fund databases, where it falls short, and cheaper alternatives.">
+    <meta property="og:site_name" content="Fiducia">
+    <meta property="og:image" content="https://getFiducia.com/assets/images/og-fiducia.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Discovery Data Pricing Explained (and Alternatives)">
+    <meta name="twitter:description" content="Discovery Data tiering, what's bundled in their RIA, BD, and mutual fund databases, where it falls short, and cheaper alternatives.">
+    <meta name="twitter:image" content="https://getFiducia.com/assets/images/og-fiducia.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://getFiducia.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Resources",
+      "item": "https://getFiducia.com/resources/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Discovery Data Pricing Explained (and Alternatives)",
+      "item": "https://getFiducia.com/resources/discovery-data-pricing-explained/"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Discovery Data Pricing Explained (and Alternatives)",
+  "description": "Discovery Data tiering, what's bundled in their RIA, BD, and mutual fund databases, where it falls short, and cheaper alternatives.",
+  "author": {
+    "@type": "Organization",
+    "name": "Fiducia"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fiducia",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://getFiducia.com/assets/favicons/apple-touch-icon.png"
+    }
+  },
+  "datePublished": "2026-05-14",
+  "dateModified": "2026-05-14",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://getFiducia.com/resources/discovery-data-pricing-explained/"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does Discovery Data cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Annual contracts typically range from $25K for a single-database, small-team license to $300K+ for a full multi-database enterprise deployment. Pricing isn't published; negotiation is standard."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I export data from Discovery Data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Export rights are part of contract negotiation. Default access is database-resident or CRM-integrated. Bulk export of the full dataset is usually restricted to higher-tier contracts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Discovery Data better than ZoomInfo for advisor outreach?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes for industry classification, AUM accuracy, and regulatory data. No for general contact enrichment volume. The two cover different problems."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Discovery Data compare to BrightScope?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Discovery covers RIA, BD, mutual fund, and insurance broadly. BrightScope is deeper in retirement plan data and Form 5500 analysis. Many enterprise teams use both."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the cheapest way to get equivalent data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For one-time use cases, a per-record vendor or a custom build from SEC and FINRA primary sources runs 70 to 90 percent cheaper. The tradeoff is more setup work and no CRM integration."
+      }
+    }
+  ]
+}
+    </script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg">
+    <link rel="icon" type="image/svg+xml" sizes="16x16" href="/assets/favicons/favicon-16.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+
+    <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/css/styles.css?v=1" as="style">
+    <link rel="stylesheet" href="/assets/fonts/plus-jakarta-sans.min.css">
+    <link rel="stylesheet" href="/css/styles.css?v=1">
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      var _fc = localStorage.getItem('fiducia-consent');
+      if (_fc === 'granted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T86RC0L61S"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-T86RC0L61S');
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="sr-only sr-only--focusable">Skip to main content</a>
+    <header class="header" role="banner">
+        <div class="container header__inner">
+            <a href="/" class="header__logo">
+                <img src="/assets/favicons/favicon.svg" alt="" class="header__logo-icon" width="32" height="32" fetchpriority="high">
+                <span class="header__logo-text">Fiducia</span>
+            </a>
+
+            <nav class="nav--desktop" role="navigation" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Data <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/advisors/" class="nav__dropdown-item">All Advisor Data</a>
+<a href="/advisors/ria/" class="nav__dropdown-item">Registered Investment Advisors</a>
+<a href="/advisors/broker-dealer/" class="nav__dropdown-item">Broker-Dealer Reps</a>
+<a href="/advisors/cfp/" class="nav__dropdown-item">Certified Financial Planners</a>
+<a href="/advisors/wealth-management/" class="nav__dropdown-item">Wealth Managers</a>
+<a href="/advisors/retirement/" class="nav__dropdown-item">Retirement Plan Advisors</a>
+                    </div>
+                </li><li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Services <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/services/advisor-contact-data/" class="nav__dropdown-item">Advisor Contact Data</a>
+<a href="/services/firm-intelligence/" class="nav__dropdown-item">Firm Intelligence</a>
+<a href="/services/custom-list-building/" class="nav__dropdown-item">Custom List Building</a>
+<a href="/services/aum-segmentation/" class="nav__dropdown-item">AUM Segmentation</a>
+                    </div>
+                </li><li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Resources <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/resources/" class="nav__dropdown-item">Guides & Articles</a>
+<a href="/compare/" class="nav__dropdown-item">Comparisons</a>
+<a href="/alternatives/" class="nav__dropdown-item">Alternatives</a>
+<a href="/for/" class="nav__dropdown-item">By Industry</a>
+<a href="/glossary/" class="nav__dropdown-item">Glossary</a>
+                    </div>
+                </li><li><a href="/pricing/" class="nav__link">Pricing</a></li><li><a href="/about/" class="nav__link">About</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__cta">
+                <a href="/contact/" class="btn btn--primary btn--sm">Get 20 Free Records</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                <span class="menu-toggle__icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav--mobile" role="navigation" aria-label="Mobile navigation">
+        <ul class="nav__list">
+            <li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Data <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/advisors/" class="nav__dropdown-item">All Advisor Data</a>
+<a href="/advisors/ria/" class="nav__dropdown-item">Registered Investment Advisors</a>
+<a href="/advisors/broker-dealer/" class="nav__dropdown-item">Broker-Dealer Reps</a>
+<a href="/advisors/cfp/" class="nav__dropdown-item">Certified Financial Planners</a>
+<a href="/advisors/wealth-management/" class="nav__dropdown-item">Wealth Managers</a>
+<a href="/advisors/retirement/" class="nav__dropdown-item">Retirement Plan Advisors</a>
+                    </div>
+                </li><li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Services <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/services/advisor-contact-data/" class="nav__dropdown-item">Advisor Contact Data</a>
+<a href="/services/firm-intelligence/" class="nav__dropdown-item">Firm Intelligence</a>
+<a href="/services/custom-list-building/" class="nav__dropdown-item">Custom List Building</a>
+<a href="/services/aum-segmentation/" class="nav__dropdown-item">AUM Segmentation</a>
+                    </div>
+                </li><li class="nav__item--dropdown">
+                    <button class="nav__dropdown-toggle" aria-expanded="false">Resources <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4"/></svg></button>
+                    <div class="nav__dropdown">
+                        <a href="/resources/" class="nav__dropdown-item">Guides & Articles</a>
+<a href="/compare/" class="nav__dropdown-item">Comparisons</a>
+<a href="/alternatives/" class="nav__dropdown-item">Alternatives</a>
+<a href="/for/" class="nav__dropdown-item">By Industry</a>
+<a href="/glossary/" class="nav__dropdown-item">Glossary</a>
+                    </div>
+                </li><li><a href="/pricing/" class="nav__link">Pricing</a></li><li><a href="/about/" class="nav__link">About</a></li>
+        </ul>
+        <a href="/contact/" class="btn btn--primary">Get 20 Free Records</a>
+    </nav>
+
+    <script>
+    (function(){
+        var toggle=document.querySelector('.menu-toggle');
+        var mobileNav=document.querySelector('.nav--mobile');
+        if(!toggle||!mobileNav)return;
+        toggle.addEventListener('click',function(){
+            var open=mobileNav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            toggle.setAttribute('aria-expanded',open);
+            document.body.style.overflow=open?'hidden':'';
+        });
+        var dropdowns=document.querySelectorAll('.nav__item--dropdown .nav__dropdown-toggle');
+        dropdowns.forEach(function(btn){
+            btn.addEventListener('click',function(e){
+                e.preventDefault();
+                var parent=btn.closest('.nav__item--dropdown');
+                var wasActive=parent.classList.contains('active');
+                if(mobileNav.contains(parent)){
+                    mobileNav.querySelectorAll('.nav__item--dropdown.active').forEach(function(d){d.classList.remove('active');d.querySelector('.nav__dropdown-toggle').setAttribute('aria-expanded','false');});
+                }
+                if(!wasActive){
+                    parent.classList.add('active');
+                    btn.setAttribute('aria-expanded','true');
+                }else{
+                    parent.classList.remove('active');
+                    btn.setAttribute('aria-expanded','false');
+                }
+            });
+        });
+    })();
+    </script>
+
+    <main id="main-content">
+
+        <section class="page-hero">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="https://getFiducia.com">Home</a> <span class="breadcrumb__separator">/</span> <a href="https://getFiducia.com/resources/">Resources</a> <span class="breadcrumb__separator">/</span> <span class="breadcrumb__current">Discovery Data Pricing Explained (and Alternatives)</span>
+        </nav>
+                <h1 class="page-hero__title">Discovery Data Pricing Explained (and Alternatives)</h1>
+                <p class="page-hero__subtitle">Discovery Data's tiering, what's bundled, where it falls short, and the alternatives most teams should consider before signing.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <article class="content__body">
+
+                    <p>Discovery Data has been the default advisor-data vendor for years. They're competent, comprehensive, and expensive. If you've been quoted a six-figure annual contract you're not alone. Whether it's the right purchase depends on a small set of questions that most buyers don't ask before signing.</p>
+
+                    <p>Here's the structure, the price ranges we've seen, and the alternatives that often fit better.</p>
+
+                    <h2>What Discovery Data Sells</h2>
+                    <p>Discovery Data sells access to a handful of separate databases bundled into a subscription:</p>
+                    <ol>
+                        <li>RIA Database (Form ADV firms and IARs)</li>
+                        <li>Broker-Dealer Database (Form BD firms and registered reps)</li>
+                        <li>Mutual Fund Database (fund-level data, share classes, distributors)</li>
+                        <li>Insurance and Annuity Database (carrier and producer data)</li>
+                        <li>Retirement Plan Database (5500 data, plan sponsors, plan advisors)</li>
+                        <li>Trust and Bank Database (bank trust departments, trust companies)</li>
+                    </ol>
+                    <p>Most buyers don't need all six. The pricing model nudges you toward the bundle.</p>
+
+                    <h2>How Pricing Works</h2>
+                    <p>Discovery Data prices by named user, by which databases you access, and by use case (CRM integration, marketing email use, internal analytics). A typical engagement looks like:</p>
+                    <ul>
+                        <li>Single database, 2 to 3 users, internal use only: $25K to $40K per year</li>
+                        <li>Two or three databases, 5 users, with email/marketing rights: $50K to $90K per year</li>
+                        <li>Full bundle, 10+ users, CRM integration, marketing use: $150K to $300K+ per year</li>
+                    </ul>
+                    <p>Pricing isn't published, and they negotiate. Multi-year contracts get discounts but lock in the spend. Mid-year add-ons are common upsell levers (an extra database, an extra user, an extra use case).</p>
+
+                    <p>The model is enterprise SaaS for data. You're buying access, not the file. If you cancel, you lose the data, including any records you've enriched in your own CRM if those records were sourced from Discovery.</p>
+
+                    <h2>Where Discovery Data Is Strong</h2>
+                    <p>Three real strengths.</p>
+                    <p>First, breadth. They cover every regulated channel in retail advice. If your ICP straddles RIAs, BD reps, and bank trust departments, no single competitor covers all three this well.</p>
+                    <p>Second, integration. They have native plugins for Salesforce, HubSpot, and a few smaller CRMs. If your team is Salesforce-first, the integration is real value.</p>
+                    <p>Third, history. They've been at this for a long time, the schema is stable, and the data engineering team knows what they're doing. Bugs are rare and the support is enterprise-grade.</p>
+
+                    <h2>Where Discovery Data Falls Short</h2>
+                    <p>Three real weaknesses.</p>
+                    <p>First, contact data quality is uneven. Firm-level data is excellent. Person-level email and direct-dial enrichment lags behind specialty contact vendors. Their email coverage is high but their email-deliverability rate is lower than what we see from contact-first vendors.</p>
+                    <p>Second, the pricing model penalizes occasional use. If you pull lists twice a year, the per-pull cost is brutal. If you pull weekly, the per-pull cost is reasonable.</p>
+                    <p>Third, you can't export everything. The data stays in their environment or in CRM integrations they control. Building proprietary models on top requires their cooperation.</p>
+
+                    <h2>Alternatives by Use Case</h2>
+                    <p>The right alternative depends on the use case.</p>
+
+                    <h3>If you need a one-time campaign list</h3>
+                    <p>Per-record vendors like Fiducia, AdvizorPro, or Outscraper-based custom builds are 80% cheaper. For a 5,000-record campaign you're looking at $5K to $15K instead of $50K. <a href="/services/custom-list-building/">We build these all the time</a>.</p>
+
+                    <h3>If you need retirement plan data specifically</h3>
+                    <p>BrightScope or Larkspur cover Form 5500 plan data and plan-advisor relationships better than Discovery. Pricing is comparable but the data is deeper for retirement-specific use cases.</p>
+
+                    <h3>If you need broker-dealer rep data with phone</h3>
+                    <p>FINRA BrokerCheck plus a contact-enrichment layer (ZoomInfo, Apollo, Cognism) gets you 60% of the way at a fraction of the cost. You'll do more cleanup but the savings are real.</p>
+
+                    <h3>If you need CRM integration for an enterprise sales team</h3>
+                    <p>Discovery's CRM integration is strong. If you have 20+ AEs hitting the data daily, this is where Discovery earns its price.</p>
+
+                    <h3>If you're segmenting by AUM and credentials only</h3>
+                    <p>The free SEC ADV bulk data plus light contact enrichment can replicate Discovery's RIA module for engineering teams that can build pipelines. <a href="/resources/how-to-build-an-ria-list/">We documented the full pipeline here</a>.</p>
+
+                    <h2>How to Decide</h2>
+                    <p>Five questions that decide the call.</p>
+                    <p><em>How often will you pull lists?</em> Weekly favors Discovery. Quarterly favors per-record.</p>
+                    <p><em>How many users will hit the data?</em> 10+ favors annual subscription. 1 to 3 favors per-record.</p>
+                    <p><em>Do you need CRM-native enrichment or one-time export?</em> Native favors Discovery. Export favors specialists.</p>
+                    <p><em>What's your tolerance for data lag?</em> Discovery refreshes frequently. Free public-data pipelines lag more.</p>
+                    <p><em>Do you need ROI proof first?</em> If you haven't validated that advisor outreach works for your product, signing a six-figure data contract is premature. Start with a per-record list, run the campaign, and decide.</p>
+
+                    <p>Most wealthtech teams we work with start with a per-record list to validate the motion, then graduate to a full data subscription once they've proven pipeline. <a href="/contact/">Happy to be the validation step</a>.</p>
+
+                    <h2>Negotiation Tactics That Work With Discovery</h2>
+                    <p>If you decide Discovery is the right vendor, the contract is more negotiable than the rep's first quote suggests. Tactics we've seen work:</p>
+
+                    <p><em>Database unbundling.</em> The default pitch is the full bundle. Most teams don't need it. Ask for pricing on the single database you really use (typically RIA only). The discount versus bundle is often 50% to 70%.</p>
+
+                    <p><em>User count flexibility.</em> Named-user pricing is the dominant model. If you can consolidate to fewer named users with shared access (where permitted), the savings are meaningful. Some contracts include team licenses with site-wide access; ask explicitly.</p>
+
+                    <p><em>Multi-year discount.</em> Two-year commits typically yield 10% to 15% off. Three-year commits yield more but introduce real risk if your ICP changes.</p>
+
+                    <p><em>Use case scoping.</em> Marketing rights, CRM-integration rights, and internal-analytics rights are sometimes priced separately. If you don't need marketing rights, removing them reduces cost.</p>
+
+                    <p><em>Bundle competing vendors.</em> If you're also evaluating BrightScope, Meridian-IQ, or specialty vendors for adjacent data, negotiate as a unified procurement. Discovery's response to competitive pressure is usually significant.</p>
+
+                    <h2>What We've Seen Discovery Customers Migrate Away From</h2>
+                    <p>The most common reasons teams downgrade or leave Discovery:</p>
+                    <ul>
+                        <li>Low utilization (paying for breadth they don't use)</li>
+                        <li>Procurement pushback on the cost-per-seat math</li>
+                        <li>Need for data export rights that Discovery's contract restricts</li>
+                        <li>Custom data builds Discovery can't easily produce (specific multi-criteria segments)</li>
+                        <li>Stack consolidation when the org standardizes on a different data platform</li>
+                    </ul>
+                    <p>Most migrators don't leave entirely. They keep a smaller Discovery footprint for the use cases where it shines and supplement with per-record or build-it-yourself approaches.</p>
+
+                    <h2>The Honest Recommendation</h2>
+                    <p>Discovery Data is a competent, expensive enterprise tool. It's the right buy for high-volume, multi-user, integration-dependent teams. It's the wrong buy for early-stage validation, occasional-use, or single-segment work. The wrong buy is what most teams default to because the sales process is well-oiled.</p>
+
+                    <p>Before you sign a Discovery contract, do the per-record math for your expected use over 24 months. If you can't beat the subscription, sign with confidence. If you can, save the money and stay flexible. <a href="/pricing/">Our per-record pricing is on the pricing page</a>.</p>
+
+                    <h2>Direct Comparisons by Use Case</h2>
+
+                    <h3>For wealthtech selling planning or CRM software</h3>
+                    <p>You need RIA contact data segmented by AUM, registration channel, and tech stack. Discovery's RIA module covers the first two but only marginally addresses the third. A per-record vendor like us pulls all three plus contact enrichment for one bundled price. Discovery wins if you have continuous outbound from 10+ AEs. Per-record wins for everything else.</p>
+
+                    <h3>For asset managers selling product distribution</h3>
+                    <p>You need broker-dealer rep and hybrid contacts plus advisor production data. Discovery's BD database is competent. Meridian-IQ (SS&amp;C) sometimes has deeper production data. Specialty vendors don't usually cover BD reps well. Discovery is usually the right call.</p>
+
+                    <h3>For retirement plan vendors</h3>
+                    <p>You need plan sponsor and plan-advisor data, not just RIA data. BrightScope is the leader; Discovery's retirement plan module is competitive but not the leader. The right call is usually BrightScope or Larkspur, with Discovery as a secondary source.</p>
+
+                    <h3>For M&amp;A targeting</h3>
+                    <p>You need ADV detail, ownership data, and AUM trajectory. Discovery has the ADV detail but doesn't pre-package M&amp;A-relevant fields. Specialty vendors and custom builds win for this use case. <a href="/resources/independent-advisor-ma-targeting/">We covered M&amp;A targeting in depth here</a>.</p>
+
+                    <h3>For compliance and surveillance vendors</h3>
+                    <p>You need detailed disciplinary disclosures, custody data, and Item 11 detail. Discovery surfaces these fields but charges enterprise pricing. A custom build from raw ADV data is often cheaper and gives you cleaner queryability. The exception is when you also need parallel BD data, which is harder to build.</p>
+
+                    <h3>For recruiting and BD-to-RIA conversion targeting</h3>
+                    <p>You need rep-level data with channel transition history. Discovery doesn't surface this well. Specialty vendors with CRD-history depth (we offer this, FA Match for recruiting) are stronger.</p>
+
+                    <p>The pattern across use cases is clear: Discovery's value is breadth and enterprise integration. Specific use cases usually have a better vendor, and most teams need fewer fields than the Discovery bundle includes.</p>
+
+                </article>
+            </div>
+        </section>
+
+        <section class="section faq-section">
+            <div class="container">
+                <h2 class="section__title">Frequently Asked Questions</h2>
+
+                <details class="faq-item">
+                    <summary class="faq-item__question">What does Discovery Data cost?</summary>
+                    <div class="faq-item__answer"><p>Annual contracts typically range from $25K for a single-database, small-team license to $300K+ for a full multi-database enterprise deployment. Pricing isn't published; negotiation is standard.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Can I export data from Discovery Data?</summary>
+                    <div class="faq-item__answer"><p>Export rights are part of contract negotiation. Default access is database-resident or CRM-integrated. Bulk export of the full dataset is usually restricted to higher-tier contracts.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Is Discovery Data better than ZoomInfo for advisor outreach?</summary>
+                    <div class="faq-item__answer"><p>Yes for industry classification, AUM accuracy, and regulatory data. No for general contact enrichment volume. The two cover different problems.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">How does Discovery Data compare to BrightScope?</summary>
+                    <div class="faq-item__answer"><p>Discovery covers RIA, BD, mutual fund, and insurance broadly. BrightScope is deeper in retirement plan data and Form 5500 analysis. Many enterprise teams use both.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__question">What's the cheapest way to get equivalent data?</summary>
+                    <div class="faq-item__answer"><p>For one-time use cases, a per-record vendor or a custom build from SEC and FINRA primary sources runs 70 to 90 percent cheaper. The tradeoff is more setup work and no CRM integration.</p></div>
+                </details>
+            </div>
+        </section>
+
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-section__header">
+                    <h2 class="cta-section__title">Need verified advisor data?</h2>
+                    <p class="cta-section__text">Tell us your criteria. We build the list.</p>
+                </div>
+                <a href="/contact/" class="btn btn--white btn--lg">Get 20 Free Records</a>
+                <p class="cta-section__proof">FINRA verified &middot; 3-5 day delivery &middot; No annual contracts</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="/" class="footer__logo">
+                        <img src="/assets/icons/icon-no-bg-white.svg" alt="" class="footer__logo-icon" width="28" height="34" loading="lazy">
+                        <span class="footer__logo-text">Fiducia</span>
+                    </a>
+                    <p class="footer__tagline">Financial Advisor Intelligence</p>
+                </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Advisor Types</h4>
+                <ul class="footer__links">
+                    <li><a href="/advisors/ria/">Registered Investment Advisors</a></li>
+<li><a href="/advisors/broker-dealer/">Broker-Dealer Reps</a></li>
+<li><a href="/advisors/cfp/">Certified Financial Planners</a></li>
+<li><a href="/advisors/wealth-management/">Wealth Managers</a></li>
+<li><a href="/advisors/insurance/">Insurance-Licensed Advisors</a></li>
+<li><a href="/advisors/retirement/">Retirement Plan Advisors</a></li>
+<li><a href="/advisors/estate-planning/">Estate Planning Advisors</a></li>
+<li><a href="/advisors/hybrid/">Hybrid/Dual-Registered</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Services</h4>
+                <ul class="footer__links">
+                    <li><a href="/services/advisor-contact-data/">Advisor Contact Data</a></li>
+<li><a href="/services/firm-intelligence/">Firm Intelligence</a></li>
+<li><a href="/services/custom-list-building/">Custom List Building</a></li>
+<li><a href="/services/aum-segmentation/">AUM Segmentation</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">For Your Team</h4>
+                <ul class="footer__links">
+                    <li><a href="/for/custodians/">Custodians</a></li>
+<li><a href="/for/compliance-tech/">Compliance Technology</a></li>
+<li><a href="/for/fintech/">Fintech Platforms</a></li>
+<li><a href="/for/insurance-distributors/">Insurance Distributors</a></li>
+<li><a href="/for/asset-managers/">Asset Managers</a></li>
+<li><a href="/for/financial-recruiting/">Financial Recruiting</a></li>
+<li><a href="/for/wealthtech/">Wealth Tech Vendors</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Compare</h4>
+                <ul class="footer__links">
+                    <li><a href="/compare/vs-zoominfo/">Fiducia vs ZoomInfo</a></li>
+<li><a href="/compare/vs-apollo/">Fiducia vs Apollo</a></li>
+<li><a href="/compare/vs-generic-b2b/">vs Generic B2B Data</a></li>
+<li><a href="/compare/vs-discovery-data/">vs Discovery Data</a></li>
+<li><a href="/alternatives/zoominfo-alternative/">ZoomInfo Alternative</a></li>
+<li><a href="/alternatives/apollo-alternative/">Apollo Alternative</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h4 class="footer__heading">Company</h4>
+                <ul class="footer__links">
+                    <li><a href="/about/">About Fiducia</a></li>
+<li><a href="/pricing/">Pricing</a></li>
+<li><a href="/contact/">Contact</a></li>
+<li><a href="https://getprovyx.com" target="_blank" rel="noopener noreferrer">Provyx</a></li>
+<li><a href="https://veruminc.com" target="_blank" rel="noopener noreferrer">Verum</a></li>
+<li><a href="https://getvettica.com" target="_blank" rel="noopener noreferrer">Vettica</a></li>
+<li><a href="/privacy/">Privacy Policy</a></li>
+<li><a href="/terms/">Terms of Service</a></li>
+                </ul>
+            </div>
+            </div>
+            <div class="footer__bottom">
+                <span>&copy; 2026 Fiducia. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="consent-banner" class="consent-banner" style="display:none">
+        <p>We use cookies to analyze site traffic and improve your experience. <a href="/privacy/">Privacy Policy</a></p>
+        <div class="consent-banner__actions">
+            <button class="consent-banner__btn consent-banner__btn--accept" onclick="fiduciaConsent('granted')">Accept</button>
+            <button class="consent-banner__btn consent-banner__btn--deny" onclick="fiduciaConsent('denied')">Deny</button>
+        </div>
+    </div>
+    <script>
+    function fiduciaConsent(v){
+      localStorage.setItem('fiducia-consent',v);
+      document.getElementById('consent-banner').style.display='none';
+    }
+    if(!localStorage.getItem('fiducia-consent')){
+      document.getElementById('consent-banner').style.display='';
+    }
+    </script>
+    <script src="/js/main.js" defer></script>
+</body>
+</html>
